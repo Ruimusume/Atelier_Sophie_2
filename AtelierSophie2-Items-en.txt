@@ -1,0 +1,480 @@
+0:Drinking Water
+1:Crackling Water
+2:Blessed Sap
+3:Zapping Water
+4:Salt Water
+5:Suspicious Liquid
+6:Anti-freeze Water
+7:Heatwave Water
+8:Wurzel Aqua
+9:Koinos Grass
+10:Weige Wheat
+11:Princess Grass
+12:Salty Grass
+13:Sunset Grass
+14:Tail Fern
+15:Hermit Lotus
+16:Bouler Eater
+17:Avus Weg
+18:Fontana Grass
+19:Scissor Leaf
+20:Earth Cactus
+21:Uni
+22:Grass Uni
+23:Frost Uni
+24:Steam Uni
+25:Gold Uni
+26:Red Flower
+27:Blue Flower
+28:Green Flower
+29:Yellow Flower
+30:White Flower
+31:Envious Flower
+32:Solar Face
+33:Lunar Face
+34:Ard Pirum
+35:Desert Stella
+36:Taun
+37:Tall Taun
+38:Crimson Grass
+39:Altare
+40:Elder Garlic
+41:Gorgonbaum
+42:Nareinja
+43:Heilin Bone Dust
+44:Herbal Sky Medicine
+45:Blackberry
+46:False Treat
+47:Devils Kiss
+48:Yuqtul Frog
+49:Fatal Nebula
+50:Star Powder
+51:Sun Powder
+52:Rustproof Heart
+53:Red Sand
+54:Black Sand
+55:White Sand
+56:Sedimentary Soil
+57:Sticky Mud
+58:Sparkling Sand
+59:Broken Rock
+60:White Ash Stone
+61:Gumstone
+62:Ancient Pillar
+63:Gravistone
+64:Dapplestone
+65:Bergstone
+66:Golden Rock
+67:Plasmein
+68:Steel Balls
+69:Eisen Ore
+70:Leiden Ore
+71:Kupfer Ore
+72:Kaen Stone
+73:Hakurei Stone
+74:Spirit Stone
+75:Magnet Stone
+76:Kimberlite
+77:Green-Spike Ore
+78:Atelis Ore
+79:Sulphur Ore
+80:Malgam Ore
+81:Silver Crystal
+82:Rubis Gemstone
+83:Saphir Gemstone
+84:Topacio Gemstone
+85:Emeraude Gemstone
+86:Diamant Gemstone
+87:Einquartz
+88:Tesca Arc
+89:Woodchips
+90:Flammable Sand
+91:Pomme de Kiefer
+92:Nitro Water
+93:Paper Scraps
+94:Expired Ticket
+95:Natural Oil
+96:Mineral Oil
+97:Aschenp Coal
+98:Mantle Powder
+99:Uro Hielo
+100:Adlers Claw
+101:Unknown Egg
+102:Delicious Milk
+103:Soil Potatoes
+104:Wish Carrot
+105:Devil Pumpkin
+106:Beast Meat
+107:Fresh Meat
+108:Whimsy Strawberries
+109:Nectar Fruit
+110:Oil Tree Fruit
+111:Cucumis Fruit
+112:Snow Queen
+113:Lunana
+114:Beehive
+115:Silver Beehive
+116:Gold Beehive
+117:Imperial Beehive
+118:Darkshroom
+119:Fairy Parasol
+120:Silver Crown
+121:Plupshroom
+122:Octoshroom
+123:Schneekleid
+124:Pretty Shells
+125:Wascher
+126:Camber
+127:Sea Snail
+128:Crab
+129:Lobster
+130:Old Master
+131:Papilio Fish
+132:Indracom
+133:Nu Ilahat
+134:Lady Bug
+135:Baby Wyrm
+136:Comet Butterfly
+137:Ingot Bug
+138:Killer Bee
+139:Glowshell
+140:Molino Cocoon
+141:Big Horned Beetle
+142:Leiden Dragonfly
+143:Grim Axe
+144:Cotton Wool
+145:SIlver Web
+146:Waffle Chain
+147:Ball Bud
+148:Wild Beast Beard
+149:Kiefer
+150:Mossy Driftwood
+151:Aroma Holz
+152:Sand Bamboo
+153:Straight Baum
+154:Rosestamm
+155:Viper Zweig
+156:Dawn Tree Branch
+157:Wing Plant
+158:Balloon Fruit
+159:Sweet Cloud
+160:Eternal Breeze
+161:Pendeloque
+162:Pendegrun
+163:Magic Tome Page
+164:Stained Grimoire
+165:Crimson Coral
+166:Siren's Tear
+167:Ancient Fossil
+168:Shining Disc
+169:Fallen Star Piece
+170:Golden Leaf
+171:Licht Kapasmos
+172:Puni Liquid
+173:Blue Puniballs
+174:Green Puniballs
+175:Red Puniballs
+176:Black Puniballs
+177:Silver Puniballs
+178:Gold Puniballs
+179:White Puniballs
+180:Monster Feather
+181:Tough Bone
+182:Beast Pelt
+183:Fine Pelt
+184:Sharp Claws
+185:Devil's Soul
+186:Ghost Glove
+187:Rabbit Fur
+188:Horn
+189:Bat Wing
+190:Kranke Cocktail
+191:Mushroom Powder
+192:Thick Tounge
+193:Jelly Gems
+194:Jellyfish Larvae
+195:Resentful Scream
+196:Parfum Bouquet
+197:Griffon Feather
+198:Big Beast Bone
+199:Large Portable Nest
+200:Wicked Fang
+201:Wicked Bone
+202:Forbidden Grimoire
+203:Golem Core
+204:Sturdy Bone
+205:Seele Pilos
+206:Dragon Scale
+207:Dragon Core
+208:Dragon Bloodstone
+209:Dragon Eye
+210:Breath Organ
+211:Evil Core
+212:Monster Poison Organ
+213:Dreamer Tentacle
+264:Dunkelheit
+265:Spiritcall Tree
+266:Zersetzent Wolf
+267:Abgrund Schuler
+268:Eternal Plate
+269:Lindorm Kloer
+270:Rebellion Garenia
+271:Key to the Stars
+272:Monoclonius
+273:Silver Taun
+274:Feurige Feather
+275:Bone Gem
+276:Antique Mushroom
+277:Azure Dragon Scale
+278:Obsidian Core
+279:Evening Star Piece
+290:Craft
+291:Bomb
+292:Ice Bomb
+293:Lightning Bomb
+294:Luft
+295:Puni Missile
+296:Rejection Weight
+297:Mysticastein
+298:Exacraft
+299:Draco Bomb
+300:Wirbel Ice Bomb
+301:Kriech Lightning Bomb
+302:Ritual Luft
+303:God's Gift
+304:Flame of Origin
+305:Heaven's Cleanser
+306:Flame of the End
+307:Twilight Prism
+308:Primal Storm
+309:Starry Comet
+320:Sedative Ointment
+321:Sotea
+322:Puni Jelly
+323:Healing Elixir
+324:Baked Waffle
+325:Honey Syrup
+326:Rest Bubble
+327:Breezy Aroma
+328:Hot Soil Potato Stew
+329:Nectar of Life
+330:Arzneizel
+331:Mystery Elixir
+332:Lebestrahl
+343:Puni Candy
+344:Warding Incense
+345:Tailwinder
+346:Spirit Weave Cloth
+347:Fire Dragon Salve
+348:Daydream Key
+354:Numbing Venom
+355:Imp's Mischief
+356:Ennui Mirror
+357:Codex of Creation
+358:Moonless Mist
+359:Shadow Lynchpin
+365:Grass Sickle
+366:Godsteel Sickle
+367:Pickaxe
+368:Exquisite Pickaxe
+369:Slingshot
+370:Trickshot
+371:Bug Net
+372:Light Bug Net
+373:Bomb Hammer
+374:Inferno Bomb Hammer
+375:Fishing Rod
+376:High Grade Rod
+387:Decoy Doll
+388:Tent Prototype 1
+389:Traveler's Shoes
+390:Emergency Bag
+391:Victor's Charm
+392:Training Charm
+398:Red Neutralizer
+399:Blue Neutralizer
+400:Yellow Neutralizer
+401:Green Neutralizer
+402:White Neutralizer
+403:Rainbow Neutralizer
+404:Pure Water
+405:Spirit Tears
+406:Weige Wheat Flower
+407:Natural Yeast
+408:Weisscream
+409:Honey
+410:Confeito
+411:Ingot
+412:Silvalia
+413:Gold Eisen
+414:Harmonium
+415:Okeagyrn
+416:Cloth
+417:Moffcloth
+418:Flugel
+419:Velvetis
+420:Geranovirgen
+421:Cure-all Base
+422:Seife
+423:Tanning Fluid
+424:Great Gift
+425:Golden Thread
+426:Stretchy Band
+427:Klavier Band
+428:Langwolke
+429:Zettel
+430:Leather
+431:Multicolor Dye
+432:Tasty-Looking Bait
+433:Charmanduft
+434:Priarco
+435:Alchemic Coal
+436:Flame Emperor Dust
+437:Refresh Oil
+438:Calm Blue Flame
+439:Polish
+440:Alchemic Clay
+441:Undastone
+442:Sperrholz Plywood
+443:Tikometal
+444:Undine's Sigh
+445:Typhoon Keim
+446:Passion Ruby
+447:Noble Sapphire
+448:Honest Topaz
+449:Wise Smaragd
+450:Innocent Adamas
+451:Millio Quartz
+452:Snowflake Crystal
+453:Asterisima
+454:Book of Hades
+455:Black Agujero
+457:Philosopher's Stones
+458:Alles Welt
+459:Plant Seeds
+460:Stone Seeds
+461:Fire Seeds
+462:Water Seeds
+463:Mystic Seeds
+464:Poison Seeds
+465:Golden Seeds
+486:Growlia Catalyst
+487:Limitia Catalyst
+488:Resolia Catalyst
+489:Storagia Catalyst
+490:Absopta Catalyst
+496:Starguide Staff
+497:Azure Cage
+498:Milky Sign
+499:Tellus Mater
+500:Enlightenment Staff
+501:Trick Hand
+502:Chaos Arm
+503:Ancient Mecha Arm
+504:Blood Kaiser
+505:Divine Punishment
+506:Rune Scepter
+507:Force Halberd
+508:Avalanche Naginata
+509:Gloria Wing
+510:Heavenly Enlightenment
+511:Long Boots
+512:Gem Heels
+513:Spy Footfalls
+514:Spike Cleaver
+515:Hollow Walker
+516:Hunting Rifle
+517:Alter Gun
+518:Hawk Scout
+519:Thunder Cannon
+520:Demon Slayer
+521:Twin Blades
+522:Knight's Twinblades
+523:Royal Guard
+524:Black Iron Swords
+525:Crimson Dragon Fangs
+536:Traveler's Vest
+537:Ringmail
+538:Scrap Armor
+539:Yarn Coat
+540:Meteor Iron Armor
+541:Verre Cuir
+542:Phantom Suit
+543:Alchemy Mantle
+544:Resurrection Wear
+545:Cerberus Plate
+556:Heart Earrings
+557:Gnade Ring
+558:Fire and Ice Bracelets
+559:Storm Bracelets
+560:Hustle Belt
+561:Lilac Jewel Necklace
+562:Eaglescope
+563:Ambrosia Garland
+564:Time Control Hourglass
+565:Intertwining Scarf
+576:Reflection Talisman
+577:Carapace Talisman
+578:Healing Talisman
+579:Lustrous Talisman
+580:Scorching Talisman
+581:Glacier Talisman
+582:Thunder Talisman
+583:Gale Talisman
+584:Safeguard Talisman
+585:Destructive Talisman
+586:Synergy Talisman
+587:Cycle Talisman
+588:Barrage Talisman
+589:Gunfighter Talisman
+590:Support Talisman
+601:Sunlight Heliodor
+602:Cloudburst Hydrite
+603:Glacial Larimar
+604:Crackling Dravite
+605:Floating Gibeon
+606:Gebet Stone - green
+607:Thunderbird Feather
+608:Dream Vessel - Air
+609:Dream Vessel - Storm
+610:Adler Feathers
+611:Monster Bait
+612:Dimensional Solvent
+613:Soul Stone
+614:Soul Cage
+615:Demolition Bomb
+616:Dream Core Fragments
+617:Reverie Powder
+618:Groll-warding Stone
+619:Antique Gold Coin
+620:Olias's Charm
+621:Zmei's Scale
+622:Wiegentraum
+623:Spirit Pendulum
+624:Vision Wayfinder
+625:Dream Vision Pendulum
+626:Antique Pot
+627:Pot Shards
+628:Daydream Crystal
+629:Artisan Brushes
+630:Wake-Up Flower
+631:Gebet Stone - yellow
+671:Weather Control - Snow
+672:How to make Demolition Bombs
+673:Greenhous Basics
+674:True Knight's Sword
+675:Wake-Up Flower Recipe
+676:Spiky Weapon
+677:Waffle Cooking Guide
+678:Heart of Alchemy
+679:The Secret of Smithing
+680:Heavenly Weaving
+681:The Secret Ingredient
+682:Happy Living
+683:A Puni Guide to DIY
+684:Dream Vision Log
+685:Falling Star
+686:Book of the New Moon
+687:Mystic Seed Recipe
+688:The Art of Battle
+766:EMPTY

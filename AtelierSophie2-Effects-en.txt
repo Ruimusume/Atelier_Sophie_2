@@ -1,0 +1,988 @@
+-1:--
+0:Physical Damage XS
+1:Physical Damage S
+2:Physical Damage M
+3:Physical Damage L
+4:Physical Damage XL
+5:Wide Blow
+6:Raging Waves
+10:Fire Damage XS
+11:Fire Damage S
+12:Fire Damage M
+13:Fire Damage L
+14:Fire Damage XL
+15:Dragon's Fury
+16:Raging Inferno
+20:Ice Damage XS
+21:Ice Damage S
+22:Ice Damage M
+23:Ice Damage L
+24:Ice Damage XL
+25:Ice Birdcage
+26:Localized Blizzard
+30:Lightning Damage XS
+31:Lightning Damage S
+32:Lightning Damage M
+33:Lightning Damage L
+34:Lightning Damage XL
+35:Creeping Thunder
+36:Roaring Shock
+40:Wind Damage XS
+41:Wind Damage S
+42:Wind Damage M
+43:Wind Damage L
+44:Wind Damage XL
+45:Devastating Torrent
+46:Zephyr's Wrath
+50:Small Missile
+51:Large Missile
+52:Super Large Missile
+53:Supersonic Missile
+55:Middleweight
+56:Heavyweight
+57:Super Heavyweight
+58:Openweight
+60:Ruby Glimmer
+61:Lapis Lazuli Glimmer
+62:Amber Glimmer
+63:Jade Glimmer
+65:Falling Uni
+66:Falling Puni
+67:Falling Meteors
+68:Falling ???
+70:Falling Stars
+71:Falling Bombs
+72:Falling Golem
+73:Gift from Heaven
+75:Power of Origin
+76:Power of Creation
+85:Light of the End
+86:Aurora of Ruin
+87:Gloomy Rainbow
+88:Pale Rainbow
+89:Brilliant Rainbow
+90:Brimming Rainbow
+91:Wild Rainbow
+92:Breezy Blade
+93:Gust Blade
+94:Gale Blade
+95:Storm Blade
+96:Tempest Blade
+97:Star Reflection
+98:Zodiac Reflection
+99:Cluster Reflection
+100:Galaxy Reflection
+101:Space Reflection
+102:Dawn of the End
+103:Afterglow of Demise
+122:Bursts
+123:Explodes
+124:Thorn Attack
+127:Sharp Thorns
+128:Exploding Thorns
+129:Piercing Thorns
+132:Piercing Damage S
+133:Piercing Damage M
+134:Piercing Damage L
+135:Piercing Damage XL
+137:Hits Vitals
+152:Blue Flames
+157:Focus Flare
+158:Pinpoint Flare
+177:Quick Freeze
+178:Instant Freeze
+192:Slightly Slows Movement
+193:Slows Movement
+194:Greatly Slows Movement
+197:Overcurrent
+198:Supercurrent
+217:Big Tornado
+218:Giant Tornado
+222:Alive
+223:Energetic
+224:Enthusiastic
+227:Black Bullets
+232:Earth Shaker
+233:Earth Breaker
+234:Earth Splitter
+237:Spare Weight
+242:Vulnerability Strike
+243:Vulnerability Shot
+292:Tri-Suffer
+293:Quin-Suffer
+294:Rainbow Trial
+302:Headwind
+303:Strong Wind
+304:Violent Wind
+305:Extreme Wind
+307:Whirlwind
+308:Whirlwind Sensation
+312:Majestic Sun
+313:Majestic Moon
+317:Guiding Meteor
+318:Guiding Comet
+319:Falling Stardust
+362:HP Recovery XS
+363:HP Recovery S
+364:HP Recovery M
+365:HP Recovery L
+366:HP Recovery XL
+367:HP Recovery XXL
+368:MP Recovery XS
+369:MP Recovery S
+370:MP Recovery M
+371:MP Recovery L
+372:MP Recovery XL
+373:MP Recovery XXL
+374:Slightly Filling
+375:Filling
+376:Very Filling
+377:HPMP Recovery XS
+378:HPMP Recovery S
+379:HPMP Recovery M
+380:HPMP Recovery L
+381:HPMP Recovery XL
+382:HPMP Recovery XXL
+383:KO Recovery XS
+384:KO Recovery S
+385:KO Recovery M
+386:KO Recovery L
+387:KO Recovery XL
+388:KO Recovery XXL
+389:Fractional HP Rec. XS
+390:Fractional HP Rec. S
+391:Fractional HP Rec. M
+392:Fractional HP Rec. L
+393:Fractional HP Rec. XL
+394:Fractional HP Rec. XXL
+395:HP Regen S
+396:HP Regen M
+397:HP Regen L
+398:MP Regen S
+399:MP Regen M
+400:MP Regen L
+407:Poison Cure
+408:Sleep Cure
+409:Curse Cure
+410:Burns Cure
+411:Frostbite Cure
+412:Paralysis Cure
+413:Restraint Cure
+414:Removes 1 SE
+415:Removes 3 SE
+416:Removes SE
+419:Amazing Evasion
+475:Calming Aroma
+476:Sedative Aroma
+477:Soothing Aroma
+478:Blissful Aroma
+495:Miracle Cure
+500:Heaven's Light
+535:Cold
+536:Warm
+537:Hot
+540:Wake Up Cup
+541:Snack Companion
+542:Bedtime Cup
+550:Sloppy
+551:Jiggly
+552:Unique Texture
+570:Crumbly
+571:Fluffy
+572:Strangely Chewy
+585:Bubble Gel
+605:Spicy Hot
+610:Source of Nutrition
+611:Nutritious
+630:Cheer Up
+631:Pep Talk
+632:High Spirits
+633:Infectious Cheer
+640:Hidden Power
+650:Cleansing Light
+651:Purifying Light
+652:Overpowering Light
+680:Repel All
+685:Slight Tailwind
+686:Strong Tailwind
+687:Ferocious Tailwind
+690:Angel's Protection
+691:Spirit's Protection
+692:Grand Spirit Blessing
+700:Connects Dimensions
+701:Connects Worlds
+702:Connects Planes
+740:Evade Evil
+741:Avoid Chaos
+755:Snow-White Garment
+765:Adrenaline Rush
+770:Firebreathing Dragon
+775:Samurai Gate
+776:Ivory Gate
+777:Scholar's Gate
+783:Bound Gate
+784:United Gate
+805:ATK Up S
+806:ATK Up M
+807:ATK Up L
+808:DEF Up S
+809:DEF Up M
+810:DEF Up L
+811:SPD Up S
+812:SPD Up M
+813:SPD Up L
+814:All Stats Up S
+815:All Stats Up M
+816:All Stats Up L
+817:Accuracy Up S
+818:Accuracy Up M
+819:Accuracy Up L
+820:Evasion Up S
+821:Evasion Up M
+822:Evasion Up L
+823:Critical Rate Up S
+824:Critical Rate Up M
+825:Critical Rate Up L
+826:Energy Surge S
+827:Energy Surge M
+828:Energy Surge L
+829:SE Resistance Up S
+830:SE Resistance Up M
+831:SE Resistance Up L
+832:Attack Count Up S
+833:Attack Count Up M
+834:Attack Count Up L
+870:Steal Some Life
+871:Steal Life
+872:Steal Lots of Life
+873:Vitality Theft
+875:Concealed Crescent
+876:Concealed Half Moon
+877:Concealed Full Moon
+880:Land Joiner
+881:Land Patcher
+882:Land Binder
+885:SE Resistance Down S
+886:SE Resistance Down M
+887:SE Resistance Down L
+935:Steal ATK
+936:Steal DEF
+937:Steal SPD
+938:Steal Lots of ATK
+939:Steal Lots of DEF
+945:Fog of Ruin
+955:Art of Delay
+985:ATK Down S
+986:ATK Down M
+987:ATK Down L
+988:ATK Down XL
+989:DEF Down S
+990:DEF Down M
+991:DEF Down L
+992:DEF Down XL
+993:SPD Down S
+994:SPD Down M
+995:SPD Down L
+996:SPD Down XL
+997:All Stats Down S
+998:All Stats Down M
+999:All Stats Down L
+1000:All Stats Down XL
+1001:Inflict Poison S
+1002:Inflict Poison M
+1003:Inflict Poison L
+1004:Inflict Poison XL
+1005:Inflict Sleep S
+1006:Inflict Sleep M
+1007:Inflict Sleep L
+1008:Inflict Sleep XL
+1009:Inflict Curse S
+1010:Inflict Curse M
+1011:Inflict Curse L
+1012:Inflict Curse XL
+1013:Inflict Burns S
+1014:Inflict Burns M
+1015:Inflict Burns L
+1016:Inflict Burns XL
+1017:Inflict Frostbite S
+1018:Inflict Frostbite M
+1019:Inflict Frostbite L
+1020:Inflict Frostbite XL
+1021:Inflict Paralysis S
+1022:Inflict Paralysis M
+1023:Inflict Paralysis L
+1024:Inflict Paralysis XL
+1025:Inflict Restraints S
+1026:Inflict Restraints M
+1027:Inflict Restraints L
+1028:Inflict Restraints XL
+1029:Fire Vulnerability
+1030:Ice Vulnerability
+1031:Lightning Vulnerability
+1032:Wind Vulnerability
+1033:Remove Enhancements
+1034:Erase Enhancements
+1035:Purge Enhancements
+1036:Weaken to Elements
+1080:Consume HP S
+1081:Consume HP M
+1082:Consume HP L
+1083:Consume HP XL
+1084:Consume MP S
+1085:Consume MP M
+1086:Consume MP L
+1087:Consume MP XL
+1088:Aura Damage S
+1089:Aura Damage M
+1090:Aura Damage L
+1091:Aura Damage XL
+1092:Reduce Consumption
+1093:Relieve Consumption
+1094:Recycle
+1095:Activate Split
+1096:Activate Scatter
+1097:Activate Division
+1098:Auto Activate 20%
+1099:Auto Activate 30%
+1100:Auto Activate 50%
+1121:Cutting
+1122:Capable Cutting
+1123:Master Cutting
+1124:Expert Cutting
+1125:Virtuoso Cutting
+1126:Mining
+1127:Capable Mining
+1128:Master Mining
+1129:Expert Mining
+1130:Virtuoso Mining
+1131:Shooting
+1132:Capable Shooting
+1133:Master Shooting
+1134:Expert Shooting
+1135:Virtuoso Shooting
+1136:Bug Catching
+1137:Capable Bug Catching
+1138:Master Bug Catching
+1139:Expert Bug Catching
+1140:Virtuoso Bug Catching
+1141:Blasting
+1142:Capable Blasting
+1143:Master Blasting
+1144:Expert Blasting
+1145:Virtuoso Blasting
+1146:Fishing
+1147:Capable Fishing
+1148:Master Fishing
+1149:Expert Fishing
+1150:Virtuoso Fishing
+1151:Gathering Up S
+1152:Gathering Up M
+1153:Gathering Up L
+1154:Gathering Up XL
+1156:Major Gathering Lv. 1
+1157:Major Gathering Lv. 2
+1158:Major Gathering Lv. 3
+1161:Trait Gatherer S
+1162:Trait Gatherer M
+1163:Trait Gatherer L
+1164:Trait Gatherer XL
+1180:Weather: All
+1181:Weather: Sunshine
+1182:Weather: Rain
+1183:Weather: Snow
+1184:Weather: Thunderstorm
+1185:Gravity Control
+1186:Charm S
+1187:Charm M
+1188:Charm L
+1189:Charm XL
+1191:Short Rest S
+1192:Short Rest M
+1193:Short Rest L
+1194:Short Rest XL
+1196:Movement Speed Up S
+1197:Movement Speed Up M
+1198:Movement Speed Up L
+1199:Movement Speed Up XL
+1201:Item Insurance S
+1202:Item Insurance M
+1203:Item Insurance L
+1204:Item Insurance XL
+1206:Money Discovery S
+1207:Money Discovery M
+1208:Money Discovery L
+1209:Money Discovery XL
+1211:Trains the Body S
+1212:Trains the Body M
+1213:Trains the Body L
+1214:Trains the Body XL
+1216:Uses +1
+1217:Uses +2
+1218:Uses +3
+1219:Uses +5
+1220:Uses +7
+1221:Uses +10
+1222:Uses +12
+1223:Uses +15
+1224:Uses +17
+1225:Uses +20
+1226:Uses +25
+1227:Uses +30
+1228:Uses +35
+1229:Uses +40
+1230:Uses +45
+1231:Guiding Star S
+1232:Guiding Star M
+1233:Guiding Star L
+1234:Guiding Star XL
+1235:Caged Sky S
+1236:Caged Sky M
+1237:Caged Sky L
+1238:Caged Sky XL
+1239:Shining Night Sky S
+1240:Shining Night Sky M
+1241:Shining Night Sky L
+1242:Shining Night Sky XL
+1243:Rigorous Nature S
+1244:Rigorous Nature M
+1245:Rigorous Nature L
+1246:Rigorous Nature XL
+1247:Spring of Wisdom S
+1248:Spring of Wisdom M
+1249:Spring of Wisdom L
+1250:Spring of Wisdom XL
+1251:Automaton S
+1252:Automaton M
+1253:Automaton L
+1254:Automaton XL
+1255:Sinister Chaos S
+1256:Sinister Chaos M
+1257:Sinister Chaos L
+1258:Sinister Chaos XL
+1259:Old Trick S
+1260:Old Trick M
+1261:Old Trick L
+1262:Old Trick XL
+1263:Imperial Blood S
+1264:Imperial Blood M
+1265:Imperial Blood L
+1266:Imperial Blood XL
+1267:Judgment S
+1268:Judgment M
+1269:Judgment L
+1270:Judgment XL
+1271:Spiritual Seal S
+1272:Spiritual Seal M
+1273:Spiritual Seal L
+1274:Spiritual Seal XL
+1275:Strength Up S
+1276:Strength Up M
+1277:Strength Up L
+1278:Strength Up XL
+1279:Mountain Toppler S
+1280:Mountain Toppler M
+1281:Mountain Toppler L
+1282:Mountain Toppler XL
+1283:Proof of Honor S
+1284:Proof of Honor M
+1285:Proof of Honor L
+1286:Proof of Honor XL
+1287:Selflessness S
+1288:Selflessness M
+1289:Selflessness L
+1290:Selflessness XL
+1291:Sturdy S
+1292:Sturdy M
+1293:Sturdy L
+1294:Sturdy XL
+1295:Precious Jewel S
+1296:Precious Jewel M
+1297:Precious Jewel L
+1298:Precious Jewel XL
+1299:Tiptoe S
+1300:Tiptoe M
+1301:Tiptoe L
+1302:Tiptoe XL
+1303:Rusty Rivet S
+1304:Rusty Rivet M
+1305:Rusty Rivet L
+1306:Rusty Rivet XL
+1307:Sky Dasher S
+1308:Sky Dasher M
+1309:Sky Dasher L
+1310:Sky Dasher XL
+1311:Hunter's Eye S
+1312:Hunter's Eye M
+1313:Hunter's Eye L
+1314:Hunter's Eye XL
+1315:Illegal Mod S
+1316:Illegal Mod M
+1317:Illegal Mod L
+1318:Illegal Mod XL
+1319:Farsighted S
+1320:Farsighted M
+1321:Farsighted L
+1322:Farsighted XL
+1323:Violent Rumbling S
+1324:Violent Rumbling M
+1325:Violent Rumbling L
+1326:Violent Rumbling XL
+1327:Banishing Bullet S
+1328:Banishing Bullet M
+1329:Banishing Bullet L
+1330:Banishing Bullet XL
+1331:Paired Blades S
+1332:Paired Blades M
+1333:Paired Blades L
+1334:Paired Blades XL
+1335:Offense &amp; Defense S
+1336:Offense &amp; Defense M
+1337:Offense &amp; Defense L
+1338:Offense &amp; Defense XL
+1339:Royal Guardian S
+1340:Royal Guardian M
+1341:Royal Guardian L
+1342:Royal Guardian XL
+1343:Disaster of Lore S
+1344:Disaster of Lore M
+1345:Disaster of Lore L
+1346:Disaster of Lore XL
+1347:Sturdy Blade S
+1348:Sturdy Blade M
+1349:Sturdy Blade L
+1350:Sturdy Blade XL
+1415:Rigorous Nature XXL
+1423:Spring of Wisdom XXL
+1455:Imperial Blood XXL
+1463:Judgment XXL
+1495:Proof of Honor XXL
+1503:Selflessness XXL
+1535:Rusty Rivet XXL
+1543:Sky Dasher XXL
+1575:Violent Rumbling XXL
+1583:Banishing Bullet XXL
+1615:Sturdy Blade XXL
+1623:Disaster of Lore XXL
+1631:Attack Count +1
+1632:Attack Count +2
+1633:Attack Count +3
+1668:Fireproof Cloth S
+1669:Fireproof Cloth M
+1670:Fireproof Cloth L
+1671:Fireproof Cloth XL
+1672:Immense Meteorite S
+1673:Immense Meteorite M
+1674:Immense Meteorite L
+1675:Immense Meteorite XL
+1676:Light-Reflecting S
+1677:Light-Reflecting M
+1678:Light-Reflecting L
+1679:Light-Reflecting XL
+1680:Phantom Camo S
+1681:Phantom Camo M
+1682:Phantom Camo L
+1683:Phantom Camo XL
+1684:Handy Pockets S
+1685:Handy Pockets M
+1686:Handy Pockets L
+1687:Handy Pockets XL
+1688:Self-Recovery S
+1689:Self-Recovery M
+1690:Self-Recovery L
+1691:Self-Recovery XL
+1692:Guard Dog's Howl S
+1693:Guard Dog's Howl M
+1694:Guard Dog's Howl L
+1695:Guard Dog's Howl XL
+1756:Elaborate Work
+1757:Precise Work
+1758:Perfect Work
+1764:Comfortable
+1765:Highly Functional
+1766:Lightweight Clothing
+1772:Brimming Magic
+1773:Overflowing Magic
+1774:Full of Magic
+1780:Prepped Medicine
+1781:Prepped Wonder Cure
+1782:Prepped Miracle Cure
+1784:Risk Averse
+1785:Emergency Maneuver
+1787:Self-Recovery XXL
+1788:Beast Hide
+1789:Monster Hide
+1790:Legendary Hide
+1792:Thick Iron Plate
+1793:Sturdy Iron Plate
+1794:Heavy Iron Plate
+1795:Guard Dog's Howl XXL
+1821:Power Rune
+1822:Herculean Rune
+1823:God Strength Rune
+1824:Godly Guardian Rune
+1825:Thunder Rune
+1826:Ice Wall
+1827:Ice Barrier
+1831:Wind Wall
+1832:Wind Barrier
+1836:Resist Gravity
+1837:Super Resist Gravity
+1838:Hero's Ambition
+1841:Weathering Resist
+1842:Transform Resist
+1843:Alteration Resist
+1846:Multiplier 2x
+1847:Multiplier 4x
+1848:Multiplier 8x
+1851:Gathered Strength
+1852:Intensified Power
+1856:Progress Time
+1857:Speed Up Time
+1858:Accelerate Time
+1861:Connecting
+1862:Bonding
+1863:Deep Feelings
+1894:Defense Rune
+1895:Guardian Rune
+1896:Speed Rune
+1897:Swift Gale Rune
+1898:Weapon Rune
+1899:Tool Rune
+1900:Bulwark Rune
+1902:Fire Wall
+1903:Fire Barrier
+1910:Lightning Wall
+1911:Lightning Barrier
+1942:Calm Blessing
+1943:Pure Blessing
+1944:Healthy Blessing
+1945:Morning Strength
+1946:Midday Strength
+1947:Sun Incarnate
+1948:Awakening of Power
+1949:Awakening of Soul
+1950:Powerful Speed
+1951:Otherworldly Speed
+1954:Change the Future
+1955:Drive the Future
+1956:Control the Future
+1958:Understanding Heart
+1959:Sympathetic Heart
+1960:Empathetic Heart
+1962:Fluttering Yarn
+1963:Trailing Yarn
+1964:Trembling Yarn
+1986:Mirrored Crest S
+1987:Mirrored Crest M
+1988:Mirrored Crest L
+1989:Mirrored Crest XL
+1991:Carapace Crest S
+1992:Carapace Crest M
+1993:Carapace Crest L
+1994:Carapace Crest XL
+1996:Healing Crest S
+1997:Healing Crest M
+1998:Healing Crest L
+1999:Healing Crest XL
+2001:Lustrous Crest S
+2002:Lustrous Crest M
+2003:Lustrous Crest L
+2004:Lustrous Crest XL
+2006:Scorching Crest S
+2007:Scorching Crest M
+2008:Scorching Crest L
+2009:Scorching Crest XL
+2011:Glacial Crest S
+2012:Glacial Crest M
+2013:Glacial Crest L
+2014:Glacial Crest XL
+2016:Thunder Crest S
+2017:Thunder Crest M
+2018:Thunder Crest L
+2019:Thunder Crest XL
+2021:Storm Crest S
+2022:Storm Crest M
+2023:Storm Crest L
+2024:Storm Crest XL
+2026:Protective Crest S
+2027:Protective Crest M
+2028:Protective Crest L
+2029:Protective Crest XL
+2031:Destructive Crest S
+2032:Destructive Crest M
+2033:Destructive Crest L
+2034:Destructive Crest XL
+2036:Transition Crest S
+2037:Transition Crest M
+2038:Transition Crest L
+2039:Transition Crest XL
+2041:Cyclical Crest S
+2042:Cyclical Crest M
+2043:Cyclical Crest L
+2044:Cyclical Crest XL
+2046:Rapid-Fire Crest S
+2047:Rapid-Fire Crest M
+2048:Rapid-Fire Crest L
+2049:Rapid-Fire Crest XL
+2051:Artillery Crest S
+2052:Artillery Crest M
+2053:Artillery Crest L
+2054:Artillery Crest XL
+2056:Support Crest S
+2057:Support Crest M
+2058:Support Crest L
+2059:Support Crest XL
+2061:HP +5
+2062:HP +10
+2063:HP +20
+2064:HP +30
+2065:HP +50
+2066:ATK +5
+2067:ATK +10
+2068:ATK +15
+2069:ATK +20
+2070:ATK +30
+2071:DEF +5
+2072:DEF +10
+2073:DEF +15
+2074:DEF +20
+2075:DEF +30
+2076:SPD +5
+2077:SPD +10
+2078:SPD +15
+2079:SPD +20
+2080:SPD +30
+2081:Accuracy +3%
+2082:Accuracy +5%
+2083:Accuracy +7%
+2084:Accuracy +10%
+2085:Accuracy +15%
+2086:Evasion +1%
+2087:Evasion +2%
+2088:Evasion +3%
+2089:Evasion +4%
+2090:Evasion +5%
+2091:Critical Rate +3%
+2092:Critical Rate +5%
+2093:Critical Rate +7%
+2094:Critical Rate +10%
+2095:Critical Rate +15%
+2096:Critical Boost +5%
+2097:Critical Boost +10%
+2098:Critical Boost +15%
+2099:Critical Boost +20%
+2100:Critical Boost +30%
+2101:Skill Boost +3%
+2102:Skill Boost +5%
+2103:Skill Boost +7%
+2104:Skill Boost +10%
+2105:Skill Boost +15%
+2106:Item Boost +3%
+2107:Item Boost +5%
+2108:Item Boost +7%
+2109:Item Boost +10%
+2110:Item Boost +15%
+2111:Item WT -3%
+2112:Item WT -5%
+2113:Item WT -7%
+2114:Item WT -10%
+2115:Item WT -15%
+2116:SE Resistance +3%
+2117:SE Resistance +5%
+2118:SE Resistance +7%
+2119:SE Resistance +10%
+2120:SE Resistance +15%
+2121:KO Resistance +3%
+2122:KO Resistance +5%
+2123:KO Resistance +7%
+2124:KO Resistance +10%
+2125:KO Resistance +15%
+2126:Damage Reduction +3%
+2127:Damage Reduction +5%
+2128:Damage Reduction +7%
+2129:Damage Reduction +10%
+2130:Damage Reduction +15%
+2146:HP Regen on Turn XS
+2147:HP Regen on Turn S
+2148:HP Regen on Turn M
+2149:HP Regen on Turn L
+2150:HP Regen on Turn XL
+2151:MP Regen on Turn XS
+2152:MP Regen on Turn S
+2153:MP Regen on Turn M
+2154:MP Regen on Turn L
+2155:MP Regen on Turn XL
+2156:Skill Reduction +3%
+2157:Skill Reduction +5%
+2158:Skill Reduction +7%
+2159:Skill Reduction +10%
+2160:Skill Reduction +15%
+2161:MP +5
+2162:MP +10
+2163:MP +20
+2164:MP +30
+2165:MP +50
+2166:HP +100
+2178:Synth Quality +5
+2179:Synth Quality +7
+2180:Synth Quality +10
+2181:Synth Quality +12
+2182:Synth Quality +15
+2183:Synth Quality +17
+2184:Synth Quality +20
+2185:Synth Quality +22
+2186:Synth Quality +25
+2187:Synth Quality +30
+2188:Synth Quality +35
+2189:Synth Quantity +1
+2190:Synth Quantity +2
+2191:Synth Quantity +3
+2192:Synth Quantity +4
+2193:Synth Quantity +5
+2194:Fire Lv. +1
+2195:Fire Lv. +2
+2196:Fire Lv. +3
+2197:Ice Lv. +1
+2198:Ice Lv. +2
+2199:Ice Lv. +3
+2200:Lightning Lv. +1
+2201:Lightning Lv. +2
+2202:Lightning Lv. +3
+2203:Wind Lv. +1
+2204:Wind Lv. +2
+2205:Wind Lv. +3
+2206:Light Lv. +1
+2207:Light Lv. +2
+2208:Light Lv. +3
+2209:Fire Max Lv. +1
+2210:Fire Max Lv. +2
+2211:Fire Max Lv. +3
+2212:Ice Max Lv. +1
+2213:Ice Max Lv. +2
+2214:Ice Max Lv. +3
+2215:Lightning Max Lv. +1
+2216:Lightning Max Lv. +2
+2217:Lightning Max Lv. +3
+2218:Wind Max Lv. +1
+2219:Wind Max Lv. +2
+2220:Wind Max Lv. +3
+2221:Light Max Lv. +1
+2222:Light Max Lv. +2
+2223:Light Max Lv. +3
+2224:Four Elements Lv.
+2225:Four Elements Max Lv.
+2244:Super Success Rate Up XS
+2245:Super Success Rate Up S
+2246:Super Success Rate Up M
+2247:Super Success Rate Up L
+2248:Super Success Rate Up XL
+2249:Gear Synth: ATK +3
+2250:Gear Synth: ATK +6
+2251:Gear Synth: ATK +10
+2252:Gear Synth: ATK +12
+2253:Gear Synth: ATK +15
+2254:Gear Synth: ATK +18
+2255:Gear Synth: ATK +20
+2256:Gear Synth: DEF +3
+2257:Gear Synth: DEF +6
+2258:Gear Synth: DEF +10
+2259:Gear Synth: DEF +12
+2260:Gear Synth: DEF +15
+2261:Gear Synth: DEF +18
+2262:Gear Synth: DEF +20
+2263:Gear Synth: SPD +3
+2264:Gear Synth: SPD +6
+2265:Gear Synth: SPD +10
+2266:Gear Synth: SPD +12
+2267:Gear Synth: SPD +15
+2268:Gear Synth: SPD +18
+2269:Gear Synth: SPD +20
+2270:Gear Synth: ATK-DEF +2
+2271:Gear Synth: ATK-DEF +4
+2272:Gear Synth: ATK-DEF +6
+2273:Gear Synth: ATK-DEF +8
+2274:Gear Synth: ATK-DEF +10
+2275:Gear Synth: ATK-DEF +12
+2276:Gear Synth: ATK-DEF +14
+2277:Gear Synth: ATK-SPD +2
+2278:Gear Synth: ATK-SPD +4
+2279:Gear Synth: ATK-SPD +6
+2280:Gear Synth: ATK-SPD +8
+2281:Gear Synth: ATK-SPD +10
+2282:Gear Synth: ATK-SPD +12
+2283:Gear Synth: ATK-SPD +14
+2284:Gear Synth: DEF-SPD +2
+2285:Gear Synth: DEF-SPD +4
+2286:Gear Synth: DEF-SPD +6
+2287:Gear Synth: DEF-SPD +8
+2288:Gear Synth: DEF-SPD +10
+2289:Gear Synth: DEF-SPD +12
+2290:Gear Synth: DEF-SPD +14
+2291:Gear Synth: All +2
+2292:Gear Synth: All +4
+2293:Gear Synth: All +6
+2294:Gear Synth: All +8
+2295:Gear Synth: All +10
+2296:Gear Synth: All +12
+2297:Gear Synth: All +14
+2318:Lv. Boost
+2319:Link Boost
+2320:Area Dye
+2321:Skills in Reserve
+2322:Link Restore
+2325:Panels: 5x5
+2326:Panels: 6x6
+2327:Panels: 7x7
+2330:Components Inverted
+2331:Components Divided
+2335:Add (Water)
+2336:Add (Plants)
+2337:Add (Uni)
+2338:Add (Flowers)
+2339:Add (Medicinal)
+2340:Add (Poisons)
+2341:Add (Elixirs)
+2342:Add (Sand)
+2343:Add (Stone)
+2344:Add (Ore)
+2345:Add (Gemstones)
+2346:Add (Gunpowder)
+2347:Add (Fuel)
+2348:Add (Edibles)
+2349:Add (Fruit)
+2350:Add (Beehives)
+2351:Add (Mushrooms)
+2352:Add (Seafood)
+2353:Add (Bugs)
+2354:Add (Threads)
+2355:Add (Lumber)
+2356:Add (Gases)
+2357:Add (Magical)
+2358:Add (Puni)
+2359:Add (Animal Mat.)
+2360:Add (Dragon Mat.)
+2361:Add (Neutralizers)
+2362:Add (Misc.)
+2363:Add (Spices)
+2364:Add (Metal)
+2365:Add (Jewels)
+2378:Pick-up Quantity Up S
+2379:Pick-up Quantity Up M
+2380:Pick-up Quantity Up L
+2381:Pick-up Quantity Up XL
+2382:Pick-up Quantity Up XXL
+2383:High Growth S
+2384:High Growth M
+2385:High Growth L
+2386:High Growth XL
+2387:High Growth XXL
+2388:Rare Pick-up Rate Up S
+2389:Rare Pick-up Rate Up M
+2390:Rare Pick-up Rate Up L
+2391:Rare Pick-up Rate Up XL
+2392:Rare Pick-up Rate Up XXL
+2393:Trait Harvester S
+2394:Trait Harvester M
+2395:Trait Harvester L
+2396:Trait Harvester XL
+2397:Trait Harvester XXL

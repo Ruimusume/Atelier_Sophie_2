@@ -1,0 +1,333 @@
+0:Quality
+1:Quality +
+2:Quality ++
+3:Well-Made
+4:Pro Perfection
+5:Superb Quality
+6:Ultimate Masterpiece
+10:Cheap
+11:Cheap +
+12:Cheap ++
+13:Bulk-Produced
+14:Mass-Produced
+15:Economical
+16:Bargain
+20:Expensive
+21:Expensive +
+22:Expensive ++
+23:Finest
+24:Rare Item
+25:Overpriced
+26:One of a Kind
+30:Destruction Up
+31:Destruction Up +
+32:Destruction Up ++
+33:Rather Devastating
+34:Very Devastating
+35:Extremely Devastating
+36:Ultimate Destruction
+40:Recovery Up
+41:Recovery Up +
+42:Recovery Up ++
+43:Ample Healing
+44:Terrific Healing
+45:Tremendous Healing
+46:Ultimate Recovery
+50:Critical
+51:Critical +
+52:Critical ++
+53:Critical Finish
+54:Half Critical
+55:Certain Critical
+56:Half-Kill
+57:One Hit Kill
+61:Uses +1
+62:Uses +2
+63:Multiply
+67:Uses -1
+68:Uses -2
+69:Reduction
+73:Strong Blessing
+74:Mighty Blessing
+75:Herculean Blessing
+78:Steward's Blessing
+79:Guardian's Blessing
+80:Seraph's Blessing
+83:Quick Blessing
+84:Light-Speed Blessing
+85:Hermes's Blessing
+88:Poison Cure
+89:Sleep Cure
+90:Curse Cure
+91:Burns Cure
+92:Frostbite Cure
+93:Paralysis Cure
+94:Restraint Cure
+95:Curse Strength
+96:Banish Strength
+97:Banish All Strength
+100:Curse Protection
+101:Banish Protection
+102:Banish All Protection
+105:Curse Speed
+106:Banish Speed
+107:Banish All Speed
+110:Inflict Poison
+111:Inflict Venom
+112:Final Venom
+113:Inflict Sleep
+114:Inflict Torpor
+115:Final Torpor
+116:Inflict Curse
+117:Inflict Grudge
+118:Final Grudge
+119:Inflict Burns
+120:Inflict Blaze
+121:Final Blaze
+122:Inflict Frostbite
+123:Inflict Glacier
+124:Final Glacier
+125:Inflict Paralysis
+126:Inflict Numbness
+127:Final Numbness
+128:Inflict Restraints
+129:Inflict Binding
+130:Final Binding
+131:Area Bonus
+132:Area Bonus +
+133:Effective vs Many
+134:Multi Bonus
+135:Multi Burst
+139:Few Bonus
+140:Few Bonus +
+141:Effective vs One
+142:Single Bonus
+143:Single Blast
+147:Few+Many Bonus
+148:Close &amp; Scattered
+152:Enhance Last
+153:Enhance Last +
+154:Final Blow
+155:Last Strike
+159:Compress Count
+160:Compress Count +
+161:Force Use
+162:Final One
+166:Charge by Number
+167:Charge by Number +
+168:Supercharge By Number
+169:Bonus Count Boost
+173:Rapid Use
+174:Rapid Use +
+175:Sonic Throw
+176:Lightning Throw
+181:Power Throw
+182:Power Throw +
+183:Strong Throw
+184:God Throw
+189:Enhance Finisher
+190:Enhance Finisher +
+191:Enhance Finisher ++
+192:Ruthless Strike
+193:Relentless Blow
+194:Merciless Strike
+195:Stun Burst
+199:HP Charge
+200:HP Boost
+201:HP Supercharge
+202:Swelling Power
+203:Overflowing Life
+204:Life Force
+205:Awakened Vitality
+209:MP Charge
+210:MP Boost
+211:MP Supercharge
+212:Magician's Wisdom
+213:Grand Magician's Wisdom
+214:Sage's Wisdom
+215:Awakened Spirit
+219:HPMP Charge
+220:HPMP Boost
+221:HPMP Supercharge
+222:Awakened Endurance
+227:ATK Charge
+228:ATK Boost
+229:ATK Supercharge
+230:Beastly Power
+231:Power of Destruction
+232:War God's Power
+233:Awakened Power
+237:DEF Charge
+238:DEF Boost
+239:DEF Supercharge
+240:Steel Protection
+241:Diamond Defense
+242:Dragonscale Protection
+243:Awakened Protection
+247:SPD Charge
+248:SPD Boost
+249:SPD Supercharge
+250:Speed of Skanda
+251:Speed of Gods
+252:Speed of Light
+253:Awakened Speed
+257:ATK-DEF Charge
+258:ATK-SPD Charge
+259:DEF-SPD Charge
+263:ATK-DEF Boost
+264:ATK-SPD Boost
+265:DEF-SPD Boost
+269:ATK-DEF Supercharge
+270:ATK-SPD Supercharge
+271:DEF-SPD Supercharge
+275:All Stats Charge
+276:All Stats Boost
+277:All Stats Supercharge
+278:All-Stat Power
+282:Parameters +5%
+283:Parameters +8%
+284:Parameters +10%
+285:Enhance the Body
+286:Superenhanced Body
+287:Develop the Body
+288:Evolve the Body
+292:MP Consumption -10%
+293:MP Consumption -15%
+294:MP Consumption -20%
+295:Cut MP Consumption
+296:Lower MP Consumption
+297:Halve MP Consumption
+298:Minimize MP Consumption
+302:Skill Power +10%
+303:Skill Power +12%
+304:Skill Power +15%
+305:Skill Charge
+306:Skill Boost
+307:Skill Supercharge
+308:Perfect Skills
+312:Eco Skill Use
+313:Reduce Skill Cost
+314:Saving on Skills
+315:Expert Skill
+316:Super Skill
+320:Increase Sharpness
+321:Sharpen the Edge
+322:Increase Aggression
+323:Barrage Attack
+324:Skillful Attack
+325:Persistent Attack
+329:Fifth Element
+330:Enchanting Tail
+331:Piping Hot
+332:Beaming Sun
+333:Pale Moonlight
+334:Slippery Component
+335:Invigorating Flavor
+336:Change of Fortune
+337:Everlasting Crimson
+338:Silky
+339:Controls Gravity
+340:Inner Storm
+341:Perfectly Round
+342:Harmonious Prayer
+343:Ever-Changing
+344:Mini Bombs
+345:Anticlimactic
+346:Frozen Delicacy
+347:Nutrient Rich
+348:Sticky
+349:Secluded
+350:Angelic Blessing
+351:Reaping
+352:Tightly Coiled
+353:Golden Glow
+354:Sturdy
+355:Spine-Chilling
+356:Awakening Heal
+357:Divine Scent
+358:Windrider
+359:Eternal Time
+360:Outlaw
+361:Superhard
+362:Life Awakening
+363:Dragon's Vitality
+364:Breath of Ruin
+365:Demon Soul
+366:Fact &amp; Fiction
+429:Growth Spurt
+430:A Little Lucky
+477:Dragon God Roar
+478:Dragon God Cure
+479:Dragon God Spirit
+480:Dragon God Soul
+481:Dragon God Fang
+482:Dragon God Scale
+483:Dragon God Limb
+484:Dragon God Wrath
+489:Demon Flare
+490:Demon Heal
+491:Demon Sonic
+492:Demon Throw
+501:Red Surge
+502:Green Surge
+503:Blue Surge
+504:Yellow Rhythm
+505:Cyan Rhythm
+506:Purple Rhythm
+507:Pure White Resonance
+508:Empty Anxiety
+509:Invisible Illness
+510:Dark Decline
+511:Sharp Mind
+512:Familiar Presence
+513:Feeble Prosperity
+514:Red Delusion
+515:Green Delusion
+516:Blue Delusion
+517:Yellow Sorrow
+518:Cyan Sorrow
+519:Purple Sorrow
+520:Pure White Corrosion
+526:Red Expertise
+527:Green Expertise
+528:Blue Expertise
+529:Yellow Finesse
+530:Cyan Finesse
+531:Purple Finesse
+532:Pure White Glory
+538:Sign of Growth
+539:Inner Ambition
+540:One for All
+541:All for One
+542:Pure-Hearted
+543:Reliable Skill
+544:Healthy Body
+550:King of the Hill
+551:Trusty Leader
+552:Benevolent Ruler
+553:Scholar King
+554:Scholar King: Heart
+555:Scholar King: Skill
+556:Scholar King: Body
+557:Tyrant King
+558:Tyrant King: Heart
+559:Tyrant King: Skill
+560:Tyrant King: Body
+562:Follower
+563:Partner
+564:Sworn Ally
+565:Genius Advisor
+566:Genius Advisor: Heart
+567:Genius Advisor: Skill
+568:Genius Advisor: Body
+569:Stalwart Ally
+570:Stalwart Ally: Heart
+571:Stalwart Ally: Skill
+572:Stalwart Ally: Body
+584:Ultimate Power
+585:Transcendent Mastery
+586:Awakening
+587:Vorpal Strike
+589:Dragon God Blessing
+590:Devil's Brand
+655:--
