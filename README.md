@@ -15,4 +15,4 @@ Dropdown.effects<br>
 Dropdown.effectssJP<br>
 Dropdown.effectsCN<br>
 
-https://imgur.com/0OQ9Lq3
+<img src="https://imgur.com/0OQ9Lq3.jpg" alt=Atelier Sophie 2"/>
