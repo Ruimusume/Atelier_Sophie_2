@@ -17,7 +17,7 @@ Dropdown.effectsCN<br>
 
 <img src="https://imgur.com/0OQ9Lq3.jpg" alt="Atelier Sophie 2"/>
 
-0:Sophie Neuenmuller,0:苏菲<br><br>
+0:Sophie Neuenmuller,0:苏菲<br>
 1:Plachta,1:普拉芙妲<br>
 2:Ramizel,2:拉米洁儿<br>
 3:Alette,3:阿蕾特<br>
