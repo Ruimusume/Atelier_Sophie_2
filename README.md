@@ -17,9 +17,9 @@ Dropdown.effectsCN<br>
 
 <img src="https://imgur.com/0OQ9Lq3.jpg" alt="Atelier Sophie 2"/>
 
-0:Sophie Neuenmuller,0:苏菲<br>
-1:Plachta,1:普拉芙妲<br>
-2:Ramizel,2:拉米洁儿<br>
-3:Alette,3:阿蕾特<br>
-4:Olias,4:奥利亚斯<br>
-5:Diebold,5:迪伯尔德<br>
+0:Sophie Neuenmuller,0:苏菲,0:ソフィー<br>
+1:Plachta,1:普拉芙妲,1:プラフタ<br>
+2:Ramizel,2:拉米洁儿,2:ラミゼル<br>
+3:Alette,3:阿蕾特,3:アレット<br>
+4:Olias,4:奥利亚斯,4:オリアス<br>
+5:Diebold,5:迪伯尔德,5:ディーボルト<br>
