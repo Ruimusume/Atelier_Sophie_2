@@ -3,47 +3,42 @@
   <CheatEntries>
     <CheatEntry>
       <ID>491</ID>
-      <Description>"&gt;&gt; Atelier Sophie 2: The Alchemist of the Mysterious Dream"</Description>
-      <Options moHideChildren="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
-      <Color>0064C8</Color>
+      <Description>"&lt;&lt; Select a process to open and check the box."</Description>
+      <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <Color>0000C8</Color>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript Async="1">{$lua}
 if syntaxcheck then return end
 
-local Ready, reqCE, cName, gName = {}, 7.2, 'ElixirFramework', 'Atelier Sophie 2: The Alchemist of the Mysterious Dream'
-
-function Ready.required(reqVer, className)
-    local ver = getCEVersion()
-    local msg = 'You using Cheat Engine '..ver..'.\nRequired that you use Cheat Engine '..reqVer..' or later.'
-    local cmp = not (ver &lt; reqVer) or error(messageDialog(msg, 2, 2))
-    if process then return end
-    msg = 'Select a process to open.'
-    local id = getWindowProcessID(findWindow(utf8ToAnsi(className), nil))
-    cmp = openProcess(id) or error(messageDialog(msg, 2, 2))
-end
+local Ready, gName = {}, "Atelier Sophie 2: The Alchemist of the Mysterious Dream"
 
 function Ready.enable(gameName)
-    Ready.removeStructures()
-    AddressList.rebuildDescriptionCache()
+    local msg = "&lt;&lt; Select a process to open and check the box."
+    if not process then memrec.description = msg; error() end
     AddressList[gameName].active = true
-    memrec.Description, memrec.Color = '&gt;&gt; '..gameName, 0x0064C8
+    memrec.description, memrec.color = '&gt;&gt; '..gameName, 0x0064C8
 end
 
 function Ready.disable(gameName)
     Ready.removeStructures()
-    AddressList[gameName].active = false
-    memrec.Description, memrec.Color = '&lt;&lt; Check the box.', 0x0000C8
+    AddressList.rebuildDescriptionCache()
+    for i = 0, AddressList.count do
+        if AddressList[i] then AddressList[i].active = false end
+    end
+    memrec.description, memrec.color = '&lt;&lt; Initialize table settings.', 0x0000C8
 end
 
 function Ready.removeStructures()
-    if getStructureCount() == 0 then return end
-    local sc = getStructureCount() - 1
-    for i = sc, 0, -1 do getStructure(i).removeFromGlobalStructureList() end
+    if (getStructureCount() == 0) then return end
+    for i = getStructureCount() - 1, 0, -1 do
+        local st = getStructure(i)
+        if st then st.removeFromGlobalStructureList() end
+    end
 end
 
 [ENABLE]
 
-Ready.required(reqCE, cName); Ready.enable(gName)
+Ready.enable(gName)
 
 [DISABLE]
 
@@ -52,14 +47,14 @@ Ready.disable(gName)
       <CheatEntries>
         <CheatEntry>
           <ID>23671</ID>
-          <Description>"&lt;脚本&gt;"</Description>
-          <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+          <Description>"&lt;scripts&gt;"</Description>
+          <Options moDeactivateChildrenAsWell="1"/>
           <Color>808080</Color>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
               <ID>22949</ID>
-              <Description>"Cheat Engine: 紧凑模式"</Description>
+              <Description>"Cheat Engine: Compact Mode"</Description>
               <Color>D58F00</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>{$lua}
@@ -81,9 +76,9 @@ compactMode(false)
             </CheatEntry>
             <CheatEntry>
               <ID>23615</ID>
-              <Description>"场景：移动速度倍率"</Description>
+              <Description>"Field: Move Speed Multiplier"</Description>
               <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -142,8 +137,8 @@ dealloc(*)
             </CheatEntry>
             <CheatEntry>
               <ID>23502</ID>
-              <Description>"场景：战斗后恢复全部"</Description>
-              <Color>D58F00</Color>
+              <Description>"Field: All Recovery After Battle"</Description>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -174,8 +169,8 @@ dealloc(*)
             </CheatEntry>
             <CheatEntry>
               <ID>23663</ID>
-              <Description>"场景：道具不减"</Description>
-              <Color>D58F00</Color>
+              <Description>"Field: No Decrease Item Usage Count"</Description>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -190,9 +185,9 @@ write_fl_usage:
             </CheatEntry>
             <CheatEntry>
               <ID>23514</ID>
-              <Description>"战斗：伤害倍率"</Description>
+              <Description>"Battle: Damage Multiplier"</Description>
               <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -240,8 +235,8 @@ dealloc(*)
             </CheatEntry>
             <CheatEntry>
               <ID>23508</ID>
-              <Description>"战斗：无视技能消耗"</Description>
-              <Color>D58F00</Color>
+              <Description>"Battle: Ignore Skill Costs"</Description>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -271,8 +266,8 @@ dealloc(*)
             </CheatEntry>
             <CheatEntry>
               <ID>23648</ID>
-              <Description>"战斗：TP 100%"</Description>
-              <Color>D58F00</Color>
+              <Description>"Battle: Instant Maximize TP"</Description>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -293,8 +288,8 @@ write_action_gauge2+03:
             </CheatEntry>
             <CheatEntry>
               <ID>23832</ID>
-              <Description>"战斗：激活双重触发"</Description>
-              <Color>D58F00</Color>
+              <Description>"Battle: Always Dual Triggers"</Description>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -309,8 +304,8 @@ trace_dg:
             </CheatEntry>
             <CheatEntry>
               <ID>23588</ID>
-              <Description>"战斗：道具不减"</Description>
-              <Color>D58F00</Color>
+              <Description>"Battle: No Decrease Item Usage Count"</Description>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -325,9 +320,9 @@ write_btl_usage:
             </CheatEntry>
             <CheatEntry>
               <ID>23518</ID>
-              <Description>"战斗：经验倍率"</Description>
+              <Description>"Battle: EXP Multiplier"</Description>
               <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -370,9 +365,9 @@ dealloc(*)
             </CheatEntry>
             <CheatEntry>
               <ID>23520</ID>
-              <Description>"战斗：克尔倍率"</Description>
+              <Description>"Battle: Cole Multiplier"</Description>
               <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -415,9 +410,9 @@ dealloc(*)
             </CheatEntry>
             <CheatEntry>
               <ID>23556</ID>
-              <Description>"调合：炼金经验倍率"</Description>
+              <Description>"Synthesis: Alchemy EXP Multiplier"</Description>
               <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -460,9 +455,9 @@ dealloc(*)
             </CheatEntry>
             <CheatEntry>
               <ID>23579</ID>
-              <Description>"调合：设置元素面板效益"</Description>
+              <Description>"Synthesis: Set Element Panel Bonuses"</Description>
               <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -477,8 +472,8 @@ trace_attribute+04:
               <CheatEntries>
                 <CheatEntry>
                   <ID>23580</ID>
-                  <Description>"效益数值"</Description>
-                  <DropDownList DisplayValueAsItem="1">2:默认
+                  <Description>"bonus value"</Description>
+                  <DropDownList DisplayValueAsItem="1">2:Default
 </DropDownList>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>Byte</VariableType>
@@ -488,9 +483,9 @@ trace_attribute+04:
             </CheatEntry>
             <CheatEntry>
               <ID>23584</ID>
-              <Description>"调合：移除元素限制器"</Description>
+              <Description>"Synthesis: Remove Element Limiters"</Description>
               <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -525,7 +520,7 @@ dealloc(*)
               <CheatEntries>
                 <CheatEntry>
                   <ID>23641</ID>
-                  <Description>"删除的数值"</Description>
+                  <Description>"value to be removed"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
                   <Address>limiter_value</Address>
@@ -534,8 +529,8 @@ dealloc(*)
             </CheatEntry>
             <CheatEntry>
               <ID>23591</ID>
-              <Description>"调合：素材不消耗"</Description>
-              <Color>D58F00</Color>
+              <Description>"Synthesis: No Item Loss"</Description>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -550,9 +545,9 @@ func_synthCorrective:
             </CheatEntry>
             <CheatEntry>
               <ID>23684</ID>
-              <Description>"构思配方全解锁"</Description>
+              <Description>"Recipes &amp; Party Quests: Instant Requirements Complete"</Description>
               <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -582,7 +577,19 @@ dealloc(*)
               <CheatEntries>
                 <CheatEntry>
                   <ID>23685</ID>
-                  <Description>"备注：解锁当前可见构思配方，取决于当前游戏进度"</Description>
+                  <Description>"Notes: It depends on the availability of materials and the storyline."</Description>
+                  <Color>808080</Color>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>24029</ID>
+                  <Description>"This script could cause the game to crash in some story events."</Description>
+                  <Color>808080</Color>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>24030</ID>
+                  <Description>"It is not recommended to leave this script active at all times."</Description>
                   <Color>808080</Color>
                   <GroupHeader>1</GroupHeader>
                 </CheatEntry>
@@ -590,8 +597,8 @@ dealloc(*)
             </CheatEntry>
             <CheatEntry>
               <ID>23667</ID>
-              <Description>"能力AP不减"</Description>
-              <Color>D58F00</Color>
+              <Description>"No Decrease AP"</Description>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -606,9 +613,9 @@ func_decAP:
             </CheatEntry>
             <CheatEntry>
               <ID>23680</ID>
-              <Description>"更改全部道具质量"</Description>
+              <Description>"Change All Item Quality"</Description>
               <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>{$lua}
 if not getAddress("item_data_ptr") or syntaxcheck then return end
@@ -640,9 +647,9 @@ timer.OnTimer, timer.Interval = changeAllItemQuality, 100
             </CheatEntry>
             <CheatEntry>
               <ID>23679</ID>
-              <Description>"道具数据编辑"</Description>
+              <Description>"Item Data Editor"</Description>
               <Options moHideChildren="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -653,7 +660,7 @@ luacall(getAddress("item_data_ptr"))
               <CheatEntries>
                 <CheatEntry>
                   <ID>23532</ID>
-                  <Description>"指针-&gt;材料箱指向的道具"</Description>
+                  <Description>"Pointer-&gt;Highlighted Item Data"</Description>
                   <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <Color>008080</Color>
@@ -666,77 +673,77 @@ luacall(getAddress("item_data_ptr"))
                     <CheatEntry>
                       <ID>23534</ID>
                       <Description>"id"</Description>
-                      <DropDownListLink>Dropdown.itemIDsCN</DropDownListLink>
+                      <DropDownListLink>Dropdown.itemIDs</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>2 Bytes</VariableType>
                       <Address>+04</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23533</ID>
-                      <Description>"质量"</Description>
+                      <Description>"quality"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>2 Bytes</VariableType>
                       <Address>+06</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23542</ID>
-                      <Description>"1st 特性"</Description>
-                      <DropDownListLink>Dropdown.traitsCN</DropDownListLink>
+                      <Description>"1st trait"</Description>
+                      <DropDownListLink>Dropdown.traits</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>2 Bytes</VariableType>
                       <Address>+0A</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23543</ID>
-                      <Description>"2nd 特性"</Description>
-                      <DropDownListLink>Dropdown.traitsCN</DropDownListLink>
+                      <Description>"2nd trait"</Description>
+                      <DropDownListLink>Dropdown.traits</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>2 Bytes</VariableType>
                       <Address>+0C</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23544</ID>
-                      <Description>"3rd 特性"</Description>
-                      <DropDownListLink>Dropdown.traitsCN</DropDownListLink>
+                      <Description>"3rd trait"</Description>
+                      <DropDownListLink>Dropdown.traits</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>2 Bytes</VariableType>
                       <Address>+0E</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23535</ID>
-                      <Description>"1st 效果"</Description>
-                      <DropDownListLink>Dropdown.effectsCN</DropDownListLink>
+                      <Description>"1st effect"</Description>
+                      <DropDownListLink>Dropdown.effects</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>2 Bytes</VariableType>
                       <Address>+10</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23536</ID>
-                      <Description>"2nd 效果"</Description>
-                      <DropDownListLink>Dropdown.effectsCN</DropDownListLink>
+                      <Description>"2nd effect"</Description>
+                      <DropDownListLink>Dropdown.effects</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>2 Bytes</VariableType>
                       <Address>+12</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23538</ID>
-                      <Description>"3rd 效果"</Description>
-                      <DropDownListLink>Dropdown.effectsCN</DropDownListLink>
+                      <Description>"3rd effect"</Description>
+                      <DropDownListLink>Dropdown.effects</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>2 Bytes</VariableType>
                       <Address>+14</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23537</ID>
-                      <Description>"4th 效果"</Description>
-                      <DropDownListLink>Dropdown.effectsCN</DropDownListLink>
+                      <Description>"4th effect"</Description>
+                      <DropDownListLink>Dropdown.effects</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>2 Bytes</VariableType>
                       <Address>+16</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23551</ID>
-                      <Description>"使用次数"</Description>
+                      <Description>"usage count"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>Byte</VariableType>
                       <Address>+24</Address>
@@ -757,7 +764,7 @@ luacall(getAddress("item_data_ptr"))
                   <CheatEntries>
                     <CheatEntry>
                       <ID>23618</ID>
-                      <Description>"1st 元素组件"</Description>
+                      <Description>"1st components elements"</Description>
                       <DropDownListLink>Dropdown.componentElements</DropDownListLink>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -765,7 +772,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23621</ID>
-                      <Description>"2nd 元素组件"</Description>
+                      <Description>"2nd components elements"</Description>
                       <DropDownListLink>Dropdown.componentElements</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -773,7 +780,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23620</ID>
-                      <Description>"3rd 元素组件"</Description>
+                      <Description>"3rd components elements"</Description>
                       <DropDownListLink>Dropdown.componentElements</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -781,7 +788,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23619</ID>
-                      <Description>"4th 元素组件"</Description>
+                      <Description>"4th components elements"</Description>
                       <DropDownListLink>Dropdown.componentElements</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -789,7 +796,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23624</ID>
-                      <Description>"1st 普通元素组件样式"</Description>
+                      <Description>"1st ordinary components pattern"</Description>
                       <DropDownListLink>Dropdown.componentPattern</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -797,7 +804,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23625</ID>
-                      <Description>"2nd 普通元素组件样式"</Description>
+                      <Description>"2nd ordinary components pattern"</Description>
                       <DropDownListLink>Dropdown.componentPattern</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -805,7 +812,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23626</ID>
-                      <Description>"3rd 普通元素组件样式"</Description>
+                      <Description>"3rd ordinary components pattern"</Description>
                       <DropDownListLink>Dropdown.componentPattern</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -813,7 +820,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23627</ID>
-                      <Description>"4th 普通元素组件样式"</Description>
+                      <Description>"4th ordinary components pattern"</Description>
                       <DropDownListLink>Dropdown.componentPattern</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -821,7 +828,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23629</ID>
-                      <Description>"1st 连接组件样式"</Description>
+                      <Description>"1st Link components pattern"</Description>
                       <DropDownListLink>Dropdown.componentLinkPattern</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -829,7 +836,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23634</ID>
-                      <Description>"2nd 连接组件样式"</Description>
+                      <Description>"2nd Link components pattern"</Description>
                       <DropDownListLink>Dropdown.componentLinkPattern</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -837,7 +844,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23633</ID>
-                      <Description>"3rd 连接组件样式"</Description>
+                      <Description>"3rd Link components pattern"</Description>
                       <DropDownListLink>Dropdown.componentLinkPattern</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -845,7 +852,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23632</ID>
-                      <Description>"4th 连接组件样式"</Description>
+                      <Description>"4th Link components pattern"</Description>
                       <DropDownListLink>Dropdown.componentLinkPattern</DropDownListLink>
                       <ShowAsSigned>1</ShowAsSigned>
                       <VariableType>Byte</VariableType>
@@ -853,7 +860,7 @@ luacall(getAddress("item_data_ptr"))
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23837</ID>
-                      <Description>"最大使用次数"</Description>
+                      <Description>"usage count max"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>Byte</VariableType>
                       <Address>+25</Address>
@@ -897,7 +904,7 @@ luacall(getAddress("item_data_ptr"))
                 </CheatEntry>
                 <CheatEntry>
                   <ID>23617</ID>
-                  <Description>"感谢: 下拉数据整理 by 露易娘, CASK, Kloze, TheBlackDream, mahopenguin"</Description>
+                  <Description>"Thanks: Dropdown by CASK, Kloze, TheBlackDream, mahopenguin, 露易娘"</Description>
                   <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
                   <Color>808080</Color>
                   <GroupHeader>1</GroupHeader>
@@ -1119,6 +1126,7 @@ luacall(getAddress("item_data_ptr"))
 211:Evil Core
 212:Monster Poison Organ
 213:Dreamer Tentacle
+214:BLANK
 264:Dunkelheit
 265:Spiritcall Tree
 266:Zersetzent Wolf
@@ -1135,6 +1143,7 @@ luacall(getAddress("item_data_ptr"))
 277:Azure Dragon Scale
 278:Obsidian Core
 279:Evening Star Piece
+280:BLANK
 290:Craft
 291:Bomb
 292:Ice Bomb
@@ -1155,6 +1164,7 @@ luacall(getAddress("item_data_ptr"))
 307:Twilight Prism
 308:Primal Storm
 309:Starry Comet
+310:BLANK
 320:Sedative Ointment
 321:Sotea
 322:Puni Jelly
@@ -1168,18 +1178,21 @@ luacall(getAddress("item_data_ptr"))
 330:Arzneizel
 331:Mystery Elixir
 332:Lebestrahl
+333:BLANK
 343:Puni Candy
 344:Warding Incense
 345:Tailwinder
 346:Spirit Weave Cloth
 347:Fire Dragon Salve
 348:Daydream Key
+349:BLANK
 354:Numbing Venom
 355:Imp's Mischief
 356:Ennui Mirror
 357:Codex of Creation
 358:Moonless Mist
 359:Shadow Lynchpin
+360:BLANK
 365:Grass Sickle
 366:Godsteel Sickle
 367:Pickaxe
@@ -1192,12 +1205,14 @@ luacall(getAddress("item_data_ptr"))
 374:Inferno Bomb Hammer
 375:Fishing Rod
 376:High Grade Rod
+377:BLANK
 387:Decoy Doll
 388:Tent Prototype 1
 389:Traveler's Shoes
 390:Emergency Bag
 391:Victor's Charm
 392:Training Charm
+393:BLANK
 398:Red Neutralizer
 399:Blue Neutralizer
 400:Yellow Neutralizer
@@ -1256,6 +1271,7 @@ luacall(getAddress("item_data_ptr"))
 453:Asterisima
 454:Book of Hades
 455:Black Agujero
+456:BLANK -red stone?-
 457:Philosopher's Stones
 458:Alles Welt
 459:Plant Seeds
@@ -1265,11 +1281,7 @@ luacall(getAddress("item_data_ptr"))
 463:Mystic Seeds
 464:Poison Seeds
 465:Golden Seeds
-486:Growlia Catalyst
-487:Limitia Catalyst
-488:Resolia Catalyst
-489:Storagia Catalyst
-490:Absopta Catalyst
+466:BLANK
 496:Starguide Staff
 497:Azure Cage
 498:Milky Sign
@@ -1300,6 +1312,7 @@ luacall(getAddress("item_data_ptr"))
 523:Royal Guard
 524:Black Iron Swords
 525:Crimson Dragon Fangs
+526:BLANK
 536:Traveler's Vest
 537:Ringmail
 538:Scrap Armor
@@ -1320,6 +1333,7 @@ luacall(getAddress("item_data_ptr"))
 563:Ambrosia Garland
 564:Time Control Hourglass
 565:Intertwining Scarf
+566:BLANK
 576:Reflection Talisman
 577:Carapace Talisman
 578:Healing Talisman
@@ -1335,6 +1349,7 @@ luacall(getAddress("item_data_ptr"))
 588:Barrage Talisman
 589:Gunfighter Talisman
 590:Support Talisman
+591:BLANK
 601:Sunlight Heliodor
 602:Cloudburst Hydrite
 603:Glacial Larimar
@@ -1366,6 +1381,8 @@ luacall(getAddress("item_data_ptr"))
 629:Artisan Brushes
 630:Wake-Up Flower
 631:Gebet Stone - yellow
+632:BLANK
+670:BLANK - Note- Recipe Books after here
 671:Weather Control - Snow
 672:How to make Demolition Bombs
 673:Greenhous Basics
@@ -1384,6 +1401,7 @@ luacall(getAddress("item_data_ptr"))
 686:Book of the New Moon
 687:Mystic Seed Recipe
 688:The Art of Battle
+689:BLANK
 766:EMPTY
 </DropDownList>
                       <Color>808080</Color>
@@ -1871,13 +1889,12 @@ luacall(getAddress("item_data_ptr"))
 686:朔月の書
 687:神秘の種のレシピ
 688:戦いの常道
-766:ない
 </DropDownList>
                       <Color>808080</Color>
                       <GroupHeader>1</GroupHeader>
                     </CheatEntry>
                     <CheatEntry>
-                      <ID>23835</ID>
+                      <ID>24035</ID>
                       <Description>"Dropdown.itemIDsCN"</Description>
                       <DropDownList DisplayValueAsItem="1">0:饮用水
 1:啪汽啪汽水
@@ -2704,7 +2721,7 @@ luacall(getAddress("item_data_ptr"))
                       <GroupHeader>1</GroupHeader>
                     </CheatEntry>
                     <CheatEntry>
-                      <ID>23843</ID>
+                      <ID>23835</ID>
                       <Description>"Dropdown.traitsJP"</Description>
                       <DropDownList DisplayValueAsItem="1">0:品質上昇
 1:品質上昇＋
@@ -6372,11 +6389,11 @@ luacall(getAddress("item_data_ptr"))
                       <ID>23622</ID>
                       <Description>"Dropdown.componentElements"</Description>
                       <DropDownList DisplayValueAsItem="1">-1:--
-0:火
-1:冰
-2:雷
-3:风
-4:光
+0:Fire
+1:Ice
+2:Lightning
+3:Wind
+4:Light
 </DropDownList>
                       <Color>808080</Color>
                       <GroupHeader>1</GroupHeader>
@@ -6537,9 +6554,9 @@ luacall(getAddress("item_data_ptr"))
             </CheatEntry>
             <CheatEntry>
               <ID>23650</ID>
-              <Description>"角色数据编辑"</Description>
+              <Description>"Character Data Editor"</Description>
               <Options moHideChildren="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -6573,7 +6590,7 @@ dealloc(*)
               <CheatEntries>
                 <CheatEntry>
                   <ID>23651</ID>
-                  <Description>"角色能力相关（谨慎修改）"</Description>
+                  <Description>"Pointer-&gt;Selected Character Data"</Description>
                   <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <Color>008080</Color>
@@ -6586,12 +6603,12 @@ dealloc(*)
                     <CheatEntry>
                       <ID>23899</ID>
                       <Description>"id"</Description>
-                      <DropDownList DisplayValueAsItem="1">0:苏菲
-1:普拉芙妲
-2:拉米洁儿
-3:阿蕾特
-4:奥利亚斯
-5:迪伯尔德
+                      <DropDownList DisplayValueAsItem="1">0:Sophie Neuenmuller
+1:Plachta
+2:Ramizel
+3:Alette
+4:Olias
+5:Diebold
 </DropDownList>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
@@ -6599,108 +6616,59 @@ dealloc(*)
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23904</ID>
-                      <Description>"HP最大值提升
-"</Description>
+                      <Description>"hp +"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+88</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23905</ID>
-                      <Description>"MP最大值提升
-"</Description>
+                      <Description>"mp +"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+8C</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23900</ID>
-                      <Description>"攻击力提升
-"</Description>
+                      <Description>"atk +"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+90</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23902</ID>
-                      <Description>"防御力提升
-"</Description>
+                      <Description>"def +"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+94</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23901</ID>
-                      <Description>"敏捷提升
-"</Description>
+                      <Description>"spd +"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+98</Address>
                     </CheatEntry>
                     <CheatEntry>
-                      <ID>23906</ID>
-                      <Description>"技能伤害增加
-%"</Description>
+                      <ID>23897</ID>
+                      <Description>"critical +"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
-                      <Address>+A8</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>23897</ID>
-                      <Description>"暴击率提升
-"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>2 Bytes</VariableType>
                       <Address>+AC</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23903</ID>
-                      <Description>"暴击伤害增加
-"</Description>
+                      <Description>"critical damage +"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+B0</Address>
                     </CheatEntry>
                     <CheatEntry>
-                      <ID>24030</ID>
-                      <Description>"行动后WT减少
-%"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+B4</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>24029</ID>
-                      <Description>"回避率提升
-"</Description>
+                      <ID>23906</ID>
+                      <Description>"evasion +"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+BC</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>24031</ID>
-                      <Description>"异常状态耐性提升
-%"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+C4</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>24032</ID>
-                      <Description>"伤害减轻率提升
-
-%"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+DC</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>24033</ID>
-                      <Description>"支持防御减轻率提升
-%"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+E0</Address>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
@@ -6718,70 +6686,70 @@ dealloc(*)
                   <CheatEntries>
                     <CheatEntry>
                       <ID>23652</ID>
-                      <Description>"等级"</Description>
+                      <Description>"Level"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+04</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23661</ID>
-                      <Description>"经验值"</Description>
+                      <Description>"Experience"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+08</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23660</ID>
-                      <Description>"当前HP"</Description>
+                      <Description>"Current HP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+0C</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23659</ID>
-                      <Description>"当前MP"</Description>
+                      <Description>"Current MP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+10</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23658</ID>
-                      <Description>"消耗额"</Description>
+                      <Description>"Current Equipment cost"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+14</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23657</ID>
-                      <Description>"最大HP（无装备加成）"</Description>
+                      <Description>"Max HP (no equipment boost)"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+18</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23656</ID>
-                      <Description>"最大MP（无装备加成）"</Description>
+                      <Description>"Max MP (no equipment boost)"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+1C</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23655</ID>
-                      <Description>"攻击力（无装备加成）"</Description>
+                      <Description>"ATK (no equipment boost)"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+20</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23654</ID>
-                      <Description>"防御力（无装备加成）"</Description>
+                      <Description>"DEF (no equipment boost)"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+24</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>23653</ID>
-                      <Description>"敏捷（无装备加成）"</Description>
+                      <Description>"SPD (no equipment boost)"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+28</Address>
@@ -6792,9 +6760,9 @@ dealloc(*)
             </CheatEntry>
             <CheatEntry>
               <ID>24028</ID>
-              <Description>"相机模式: 角色不隐形"</Description>
+              <Description>"Photo Mode: No Characters Invisibility"</Description>
               <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -6817,8 +6785,8 @@ write_invi_flag:
             </CheatEntry>
             <CheatEntry>
               <ID>23991</ID>
-              <Description>"相机模式: 移除相机移动"</Description>
-              <Color>D58F00</Color>
+              <Description>"Photo Mode: Remove Camera Movement Cap"</Description>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -6841,19 +6809,20 @@ trace_camera_movement2:
         </CheatEntry>
         <CheatEntry>
           <ID>23672</ID>
-          <Description>"&lt;地址&gt;"</Description>
-          <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+          <Description>"&lt;addresses&gt;"</Description>
+          <Options moDeactivateChildrenAsWell="1"/>
           <Color>808080</Color>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
               <ID>23675</ID>
-              <Description>"难度"</Description>
+              <Description>"difficulty"</Description>
               <DropDownList DisplayValueAsItem="1">0:EASY
 1:NORMAL
 2:HARD
 3:VERY HARD
-4:
+4:CHARISMA
+5:LEGEND
 </DropDownList>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
@@ -6861,35 +6830,35 @@ trace_camera_movement2:
             </CheatEntry>
             <CheatEntry>
               <ID>23833</ID>
-              <Description>"委托名声"</Description>
+              <Description>"quest reputation"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>quest_rep_addr</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>23678</ID>
-              <Description>"章节部分"</Description>
+              <Description>"time"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>time_addr</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>23668</ID>
-              <Description>"采集篮容量"</Description>
+              <Description>"basket capacity"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>basket_cap_addr</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>23677</ID>
-              <Description>"克尔"</Description>
+              <Description>"cole"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>cole_addr</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>23896</ID>
-              <Description>"讨伐证书"</Description>
+              <Description>"report"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>cole_addr+08</Address>
@@ -6933,8 +6902,8 @@ trace_camera_movement2:
         </CheatEntry>
         <CheatEntry>
           <ID>23895</ID>
-          <Description>"&lt;structures&gt;"</Description>
-          <Options moHideChildren="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <Description>"&lt;pointers&gt;"</Description>
+          <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
           <Color>808080</Color>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
@@ -7048,6 +7017,20 @@ trace_camera_movement2:
                       <Address>+0240</Address>
                     </CheatEntry>
                     <CheatEntry>
+                      <ID>24031</ID>
+                      <Description>"photo mode: pitch lower cap (visual)"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>Float</VariableType>
+                      <Address>+440</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>24032</ID>
+                      <Description>"photo mode: pitch upper cap (visual)"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>Float</VariableType>
+                      <Address>+444</Address>
+                    </CheatEntry>
+                    <CheatEntry>
                       <ID>23888</ID>
                       <Description>"photo mode: zoom in cap (visual)"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
@@ -7103,16 +7086,22 @@ trace_camera_movement2:
           </CheatEntries>
         </CheatEntry>
         <CheatEntry>
-          <ID>22950</ID>
-          <Description>"&lt;forcoders&gt;"</Description>
-          <Options moAlwaysHideChildren="1"/>
+          <ID>24033</ID>
+          <Description>"&lt;settings&gt;"</Description>
+          <Options moHideChildren="1"/>
           <Color>808080</Color>
-          <GroupHeader>1</GroupHeader>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+nop
+
+[DISABLE]
+</AssemblerScript>
           <CheatEntries>
             <CheatEntry>
               <ID>551</ID>
               <Description>"Atelier Sophie 2: The Alchemist of the Mysterious Dream"</Description>
-              <Color>D58F00</Color>
+              <Color>808080</Color>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>{$lua}
 if syntaxcheck then return end
@@ -7121,7 +7110,13 @@ local region = function(startSection, stopSection, dllName)
     local base  = dllName or process
     local start = getAddressSafe(base..startSection)
     local size  = getAddressSafe(base..stopSection) - start - 0x1
-    return start, size
+    if start and size then return start, size end
+end
+
+local multiActive = function(required, state)
+    for i = 1, #required do
+        if required[i] then required[i].active = state end
+    end
 end
 
 local start, size = region(".text", ".rdata")
@@ -7147,9 +7142,9 @@ local DhaosCollider = {
         {"read_basket_cap",  "8B05xxxxxxxx488D5424xx41B9xxxxxxxx894424", 9, 8, start, size},
         {"read_cole",        "011DxxxxxxxxB9",                           1, 1, start, size},
         {"read_quest_rep",   "8B05xxxxxxxx03C1",                         2, 1, start, size},
-        {"read_photo_in",    "F30F1005xxxxxxxxC3CCCCCCCCCCCCCC48895C24", 5, 1, start, size},
+        {"read_photo_in",    "F30F1005xxxxxxxxC3CCCCCCCCCCCCCC48895C24", 3, 1, start, size},
         {"read_photo_out",   "F30F1005xxxxxxxx4883C4xxC3F30F1005",       1, 1, start, size},
-        {"read_photo_pitch", "F30F1005xxxxxxxxC3CCCCCCCCCCCCCC48895C24", 5, 2, start, size}
+        {"read_photo_pitch", "F30F1005xxxxxxxxC3CCCCCCCCCCCCCC48895C24", 3, 2, start, size}
     },
     ["Field: Move Speed Multiplier"] = { -- with Required.playerMovement
         {nil,            "488B49xx4885C974xxF30F1005",   1, 1, start, size},
@@ -7221,33 +7216,42 @@ local DhaosCollider = {
     }
 }
 
+local req = {
+    AddressList["Required.playerMovement"],
+    AddressList["Required.itemData"],
+    AddressList["Required.FMWorld"],
+    AddressList["Required.Find.BaseAddress"]
+}
+
 local Register = {}
 
 function Register.enable(author)
-    waitForSections(); -- waitForPDB()
+    waitForSections(); waitForPDB()
     for key, tbl in pairs(author) do
-        local state = Register.multiCustomScan(tbl)
-        if AddressList[key] then AddressList[key].color = state and 0xD58F00 or 0x808080 end
+        local al, state = AddressList[key], Register.multiCustomScan(tbl)
+        if al then al.color = state and 0xD58F00 or 0x808080 end
     end
     memrec.color = 0xD58F00
 end
 
 function Register.disable(author)
     for key, tbl in pairs(author) do
-        if AddressList[key] then AddressList[key].color = 0x808080 end
-        for i = 1, #tbl do local array = tbl[i]; unregisterSymbol(array[1]) end
+        local al = AddressList[key]
+        if al then al.color = 0x808080 end
+        for i = 1, #tbl do local args = tbl[i]; unregisterSymbol(args[1]) end
     end
     memrec.color = 0x808080
 end
 
 function Register.multiCustomScan(array)
+    local available = true
     for i = 1, #array do
         local args = array[i]
         local addr = Register.customScan(args[2], args[3], args[4], args[5], args[6])
-        if not addr then return end
+        if not addr then available = false end
         unregisterSymbol(args[1]); registerSymbol(args[1], addr)
     end
-    return true
+    return available
 end
 
 function Register.customScan(strAOB, countNum, selectNum, start, size)
@@ -7265,21 +7269,10 @@ function Register.memScan(strAOB, start, size)
     memscan_firstScan(ms, soExactValue, vtByteArray, nil, strAOB, nil, start, start + size,
     "*X*W", fsmNotAligned, nil, true, false, false, false)
     memscan_waitTillDone(ms); foundlist_initialize(fl)
-    if fl.getCount() &lt; 1 then ms.destroy(); fl.destroy(); return end
+    if (fl.getCount() &lt; 1) then ms.destroy(); fl.destroy(); return end
     local result = createStringlist()
     for i = 0, foundlist_getCount(fl) do result.add(fl.getAddress(i - 1)) end
     ms.destroy(); fl.destroy(); return result
-end
-
-local req = {
-    AddressList["Required.playerMovement"],
-    AddressList["Required.itemData"],
-    AddressList["Required.FMWorld"],
-    AddressList["Required.Find.BaseAddress"]
-}
-
-local multiActive = function(required, state)
-    for i = 1, #required do required[i].active = state end
 end
 
 [ENABLE]
@@ -7294,11 +7287,11 @@ multiActive(req, false); Register.disable(DhaosCollider)
                 <CheatEntry>
                   <ID>718</ID>
                   <Description>"Required.playerMovement"</Description>
-                  <Color>D58F00</Color>
+                  <Color>808080</Color>
                   <VariableType>Auto Assembler Script</VariableType>
                   <AssemblerScript>[ENABLE]
 
-luacall(playerMovementOffset = readByte(getAddress("read_playerMovement") + 0x3))
+luacall(playerMovementOffset = readBytes(getAddress("read_playerMovement") + 0x3))
 alloc(newmem,$1000,read_playerMovement)
 label(code_playerMovement,playerMovement_ptr)
 registersymbol(code_playerMovement,playerMovement_ptr)
@@ -7361,7 +7354,7 @@ Atelier_Sophie_2.exe+1C1236: C3                       - ret
                   <ID>23548</ID>
                   <Description>"Required.itemData"</Description>
                   <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
-                  <Color>D58F00</Color>
+                  <Color>808080</Color>
                   <VariableType>Auto Assembler Script</VariableType>
                   <AssemblerScript>[ENABLE]
 
@@ -7394,20 +7387,48 @@ read_item_data:
 
 unregistersymbol(*)
 dealloc(*)
+
+{
+// Required.itemData: read_item_data
+
+Atelier_Sophie_2.exe+635A21: CC                    - int 3
+Atelier_Sophie_2.exe+635A22: 48 8D 0D 77 17 71 00  - lea rcx,[Atelier_Sophie_2.exe+D471A0]
+Atelier_Sophie_2.exe+635A29: E8 12 B6 61 00        - call Atelier_Sophie_2.exe+C51040
+Atelier_Sophie_2.exe+635A2E: CC                    - int 3
+Atelier_Sophie_2.exe+635A2F: CC                    - int 3
+Atelier_Sophie_2.exe+635A30: 48 83 EC 28           - sub rsp,28
+Atelier_Sophie_2.exe+635A34: 48 8B 49 08           - mov rcx,[rcx+08]
+Atelier_Sophie_2.exe+635A38: E8 03 53 FF FF        - call Atelier_Sophie_2.exe+62AD40
+Atelier_Sophie_2.exe+635A3D: 48 85 C0              - test rax,rax
+Atelier_Sophie_2.exe+635A40: 74 09                 - je Atelier_Sophie_2.exe+635A4B
+// ---------- INJECTING HERE ----------
+read_item_data: 48 8B 40 08           - mov rax,[rax+08]
+// ---------- DONE INJECTING  ----------
+Atelier_Sophie_2.exe+635A46: 48 83 C4 28           - add rsp,28
+Atelier_Sophie_2.exe+635A4A: C3                    - ret
+Atelier_Sophie_2.exe+635A4B: 48 83 C4 28           - add rsp,28
+Atelier_Sophie_2.exe+635A4F: C3                    - ret
+Atelier_Sophie_2.exe+635A50: 83 FA 11              - cmp edx,11
+Atelier_Sophie_2.exe+635A53: 77 0E                 - ja Atelier_Sophie_2.exe+635A63
+Atelier_Sophie_2.exe+635A55: 48 63 C2              - movsxd  rax,edx
+Atelier_Sophie_2.exe+635A58: 48 8D 0D 41 F9 24 01  - lea rcx,[Atelier_Sophie_2.exe+18853A0]
+Atelier_Sophie_2.exe+635A5F: 8B 04 81              - mov eax,[rcx+rax*4]
+Atelier_Sophie_2.exe+635A62: C3                    - ret
+}
 </AssemblerScript>
                 </CheatEntry>
                 <CheatEntry>
                   <ID>23845</ID>
                   <Description>"Required.FMWorld"</Description>
-                  <Color>D58F00</Color>
+                  <Color>808080</Color>
                   <VariableType>Auto Assembler Script</VariableType>
                   <AssemblerScript>[ENABLE]
 
-luacall(CameraCFieldMap2Offset = readByte(getAddress("trace_zoom") + 0x3))
+luacall(CameraCFieldMap2Offset = readBytes(getAddress("trace_zoom") + 0x3))
 luacall(flCameraOffset         = readInteger(getAddress("read_flCamera") + 0x3))
-luacall(FMPlayerOffset         = readByte(getAddress("read_FMplayer") + 0x3))
+luacall(FMPlayerOffset         = readBytes(getAddress("read_FMplayer") + 0x3))
 luacall(UtilPitchOffset        = readInteger(getAddress("read_UtilPitch") + 0x3))
-luacall(UtilYawOffset          = readByte(getAddress("read_UtilYaw") + 0x3))
+luacall(UtilYawOffset          = readBytes(getAddress("read_UtilYaw") + 0x3))
 luacall(UtilZoomOffset         = readInteger(getAddress("read_UtilZoom") + 0x3))
 luacall(AddressList["P-&gt;Field Camera Work"].active = true)
 alloc(newmem,$1000,trace_zoom)
@@ -7526,6 +7547,27 @@ Find.multiUnregister(base)
 </DropDownList>
                   <Color>808080</Color>
                   <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>24034</ID>
+                  <Description>"Reserved.publicDescription"</Description>
+                  <Color>808080</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript Async="1">{$lua}
+if syntaxcheck then return end
+
+local publicDescription = function()
+    local al = AddressList["&lt;&lt; Initialize table settings."]
+    al.description = "&lt;&lt; Select a process to open and check the box."
+    sleep(500)
+end
+
+[ENABLE]
+
+publicDescription(); return "nop"
+ 
+[DISABLE]
+</AssemblerScript>
                 </CheatEntry>
                 <CheatEntry>
                   <ID>23639</ID>
@@ -8075,33 +8117,6 @@ Atelier_Sophie_2.exe+467C20: 89 01                 - mov [rcx],eax
 Atelier_Sophie_2.exe+467C22: C3                    - ret
 }
 {
-// Item Data Editor: read_item_data
-
-Atelier_Sophie_2.exe+635A21: CC                    - int 3
-Atelier_Sophie_2.exe+635A22: 48 8D 0D 77 17 71 00  - lea rcx,[Atelier_Sophie_2.exe+D471A0]
-Atelier_Sophie_2.exe+635A29: E8 12 B6 61 00        - call Atelier_Sophie_2.exe+C51040
-Atelier_Sophie_2.exe+635A2E: CC                    - int 3
-Atelier_Sophie_2.exe+635A2F: CC                    - int 3
-Atelier_Sophie_2.exe+635A30: 48 83 EC 28           - sub rsp,28
-Atelier_Sophie_2.exe+635A34: 48 8B 49 08           - mov rcx,[rcx+08]
-Atelier_Sophie_2.exe+635A38: E8 03 53 FF FF        - call Atelier_Sophie_2.exe+62AD40
-Atelier_Sophie_2.exe+635A3D: 48 85 C0              - test rax,rax
-Atelier_Sophie_2.exe+635A40: 74 09                 - je Atelier_Sophie_2.exe+635A4B
-// ---------- INJECTING HERE ----------
-read_item_data: 48 8B 40 08           - mov rax,[rax+08]
-// ---------- DONE INJECTING  ----------
-Atelier_Sophie_2.exe+635A46: 48 83 C4 28           - add rsp,28
-Atelier_Sophie_2.exe+635A4A: C3                    - ret
-Atelier_Sophie_2.exe+635A4B: 48 83 C4 28           - add rsp,28
-Atelier_Sophie_2.exe+635A4F: C3                    - ret
-Atelier_Sophie_2.exe+635A50: 83 FA 11              - cmp edx,11
-Atelier_Sophie_2.exe+635A53: 77 0E                 - ja Atelier_Sophie_2.exe+635A63
-Atelier_Sophie_2.exe+635A55: 48 63 C2              - movsxd  rax,edx
-Atelier_Sophie_2.exe+635A58: 48 8D 0D 41 F9 24 01  - lea rcx,[Atelier_Sophie_2.exe+18853A0]
-Atelier_Sophie_2.exe+635A5F: 8B 04 81              - mov eax,[rcx+rax*4]
-Atelier_Sophie_2.exe+635A62: C3                    - ret
-}
-{
 // Character Data Editor: trace_chara_data
 
 Atelier_Sophie_2.exe+5A0A16: 33 C0                 - xor eax,eax
@@ -8219,174 +8234,35 @@ Atelier_Sophie_2.exe+1E5A79: 48 83 7F 10 00           - cmp qword ptr [rdi+10],0
       </CheatEntries>
     </CheatEntry>
   </CheatEntries>
-  <UserdefinedSymbols>
-    <SymbolEntry>
-      <Name>write_fl_usage</Name>
-      <Address>140305D90</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>func_synthCorrective</Name>
-      <Address>1402FE580</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_x_coord</Name>
-      <Address>1408E14C4</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_y_coord</Name>
-      <Address>1408E14D8</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_exp_gain1</Name>
-      <Address>14039D859</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_playerMovement</Name>
-      <Address>1401C167E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_zoom</Name>
-      <Address>1404F7043</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_flCamera</Name>
-      <Address>14060BB3C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_FMplayer</Name>
-      <Address>1404B2BAB</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_UtilPitch</Name>
-      <Address>1406086DE</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_UtilYaw</Name>
-      <Address>140616BBA</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_UtilZoom</Name>
-      <Address>1406084FB</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_damage</Name>
-      <Address>1405E2C50</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_chara_offset</Name>
-      <Address>140383A70</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_attribute</Name>
-      <Address>1402869BA</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_camera_movement1</Name>
-      <Address>1401E61DF</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_camera_movement2</Name>
-      <Address>1401E622D</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>write_invi_flag</Name>
-      <Address>1406FECCA</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_recipe_req</Name>
-      <Address>1405C7BEF</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>write_limiter</Name>
-      <Address>140284830</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_dg</Name>
-      <Address>14009E255</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_item_data</Name>
-      <Address>14063A582</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_exp_gain2</Name>
-      <Address>14039D89E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name/>
-      <Address>14063A582</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>func_decAP</Name>
-      <Address>14046A780</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_chara_data</Name>
-      <Address>1405A3EFF</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>write_alchemy_gain</Name>
-      <Address>14027F266</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>write_btl_usage</Name>
-      <Address>1403026B0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>write_action_gauge1</Name>
-      <Address>1400B117A</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>write_action_gauge2</Name>
-      <Address>1400B17FF</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_game_set</Name>
-      <Address>14065A12E</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_time</Name>
-      <Address>14059D0D0</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_basket_cap</Name>
-      <Address>1405A33F2</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_cole</Name>
-      <Address>1405A37B2</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>read_quest_rep</Name>
-      <Address>140148C80</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>write_after_btl</Name>
-      <Address>140537948</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>trace_skill_costs</Name>
-      <Address>14058D407</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>game_set_addr</Name>
-      <Address>1417B2920</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>time_addr</Name>
-      <Address>141824B68</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>basket_cap_addr</Name>
-      <Address>1418A481C</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>cole_addr</Name>
-      <Address>1418A48F8</Address>
-    </SymbolEntry>
-    <SymbolEntry>
-      <Name>quest_rep_addr</Name>
-      <Address>1418043C8</Address>
-    </SymbolEntry>
-  </UserdefinedSymbols>
+  <UserdefinedSymbols/>
+  <LuaScript>local reqCE, pName = 7.2, 'ElixirFramework'
+
+local validate = function(requireVersion, wndOrProcName)
+    local ver = getCEVersion()
+    local msg = 'You using Cheat Engine '..ver..'.\nRequired that you use Cheat Engine '..requireVersion..' or later.'
+    if (ver &lt; requireVersion) then return messageDialog(msg, 2, 2) end
+    AddressList[0].description = "&lt;&lt; Initialize table settings."
+    local id = getWindowProcessID(findWindow(utf8ToAnsi(wndOrProcName), nil))
+    openProcess(id); AddressList[0].active = true
+end
+
+local publicMemrecCount = function()
+    local ac, cc = AddressList.count - 1, 0
+    for i = ac, 0, -1 do
+        if (AddressList[i] == AddressList["&lt;settings&gt;"]) then cc = i; break end
+    end
+    return cc
+end
+
+local autoCompactMode = function()
+    if not process or (publicMemrecCount() &lt; 32) then return end
+    AddressList["Cheat Engine: Compact Mode"].active = true
+end
+
+validate(reqCE, pName); autoCompactMode()
+</LuaScript>
+  <Signature>
+    <SignedHash HashSize="132">0GU1iJ+t2Oq$H+Ms.c-cy0V48Z-b9;$H9ChdGoT=RN+j0g?Q.J1K:*=:3HKZ^Uky1,{jM*g?@{EBB/7hF*IQ333G.s6mD83asOrsWmPYF:WA;73o^1K.m%+KR(aWB9uvA:T/vLr*od#bF8cNWPoi03oxqRgPUaiIaSE}w</SignedHash>
+    <PublicKey Size="308">7XSbNQ*y;zWn;@=c[2h,VQ,IoZ*_L7WMy*U00IC-LsK/E00001aK(^Jm+xp?vq8UzxXhkcZp(^)PRPS9LujY3!E:y9Go4/9v3];5QgaA0WQsQ6JU=UyMrX.Z4dxo3LE5-QI^/Q,*eq@v]j4$YZsMTX-d{_b!=9VPl=Sj765M+EOc167l}rv6@l^[?A#T:aJovQ,gm[cpz_KA/DSSZ8vYyHSga7}l01+Ol3U3$K/cmhka*fA,ri1-s-o_}YX3*[aDg6FG$ONY,d0ga[iOwqx717mp@6lXcW0_5Wjndrk(Sqb;5IzAF9CWxJ*mULOR$cOi(=lJ+qk5X?G+Si5p-,w{hb1+YzffG7;Y2r2tDSZ=fL(!ciW8xE5K8X0!dR-i(YZyX</PublicKey>
+  </Signature>
 </CheatTable>
