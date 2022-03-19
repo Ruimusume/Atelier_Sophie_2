@@ -1,6 +1,6 @@
 # 苏菲的炼金工房2 CE中文修改器
 
-表格来源：https://fearlessrevolution.com/viewtopic.php?f=4&t=19323
+修改器来源（已更新中文）：https://fearlessrevolution.com/viewtopic.php?f=4&t=19323
 
 数据对照：https://barrelwisdom.com/sophie2/items/ja
 
